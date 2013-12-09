@@ -1,0 +1,1003 @@
+<project name="accessplatform" default="archive" basedir=".">
+    <!-- Access local build properties -->
+    <property file="build.properties"/>
+    <property name="dn_reporoot" value="${plugins_repo}/${datanucleus.group}"/>
+    <typedef file="build_copyjar.xml"/>
+
+    <target name="clean" description="clean">
+        <delete dir="${basedir}/target"/>
+    </target>
+
+    <!-- Overall target to build all archives -->
+    <target name="archive" description="build archives" depends="clean">
+        <antcall target="arch_nodeps"/>
+        <antcall target="arch_deps"/>
+        <antcall target="arch_rdbms"/>
+        <antcall target="arch_excel"/>
+        <antcall target="arch_xml"/>
+        <antcall target="arch_ldap"/>
+        <antcall target="arch_odf"/>
+        <antcall target="arch_hbase"/>
+        <antcall target="arch_mongodb"/>
+        <antcall target="arch_neo4j"/>
+        <!--antcall target="arch_neodatis"/-->
+    </target>
+
+    <target name="arch_rdbms" description="Build RDBMS archive">
+        <echo>Generating DataNucleus Access Platform (RDBMS) archive</echo>
+        <property name="dist.dir" value="${basedir}/target/${archive.rdbms.name}"/>
+        <mkdir dir="${dist.dir}"/>
+        <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
+        <copy file="${basedir}/README.txt" todir="${dist.dir}"/>
+
+        <!-- Include all DataNucleus plugins. -->
+        <mkdir dir="${dist.dir}/lib"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-core" version="${datanucleus-core.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-rdbms" version="${datanucleus-rdbms.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-spatial" version="${datanucleus-spatial.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-awtgeom" version="${datanucleus-awtgeom.version}"/>
+
+        <!-- Include all dependencies. -->
+        <mkdir dir="${dist.dir}/deps"/>
+        <copy-m1-jar reporoot="${deps_repo}/${jdo.group}" dest="${dist.dir}/deps"
+            artifact="${jdo.artifact}" version="${jdo.version}"/>
+        <copy file="${basedir}/licenses/jdo-api.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${geronimo_jpa.group}" dest="${dist.dir}/deps"
+            artifact="${geronimo_jpa.artifact}" version="${geronimo_jpa.version}"/>
+        <copy file="${basedir}/licenses/geronimo_jpa.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${geronimo_jta.group}" dest="${dist.dir}/deps"
+            artifact="${geronimo_jta.artifact}" version="${geronimo_jta.version}"/>
+        <copy file="${basedir}/licenses/geronimo_jta.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${ehcache.group}" dest="${dist.dir}/deps"
+            artifact="${ehcache.artifact}" version="${ehcache.version}"/>
+        <copy file="${basedir}/licenses/ehcache.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${log4j.group}" dest="${dist.dir}/deps"
+            artifact="${log4j.artifact}" version="${log4j.version}"/>
+        <copy file="${basedir}/licenses/log4j.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${h2.group}" dest="${dist.dir}/deps"
+            artifact="${h2.artifact}" version="${h2.version}"/>
+        <copy file="${basedir}/licenses/h2.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${jodatime.group}" dest="${dist.dir}/deps"
+            artifact="${jodatime.artifact}" version="${jodatime.version}"/>
+        <copy file="${basedir}/licenses/jodatime.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${javaxtime.group}" dest="${dist.dir}/deps"
+            artifact="${javaxtime.artifact}" version="${javaxtime.version}"/>
+        <copy file="${basedir}/licenses/time-api.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${google.guava.group}" dest="${dist.dir}/deps"
+            artifact="${google.guava.artifact}" version="${google.guava.version}"/>
+        <copy file="${basedir}/licenses/google.guava.license.txt" todir="${dist.dir}/deps"/>
+
+        <!-- Include the tools -->
+        <mkdir dir="${dist.dir}/tools"/>
+        <copy todir="${dist.dir}/tools">
+            <fileset dir="tools"/>
+        </copy>
+
+        <!-- Include the tutorials -->
+
+        <!-- Create the zip -->
+        <zip zipfile="${basedir}/target/${archive.rdbms.name}.zip">
+            <zipfileset prefix="${archive.rdbms.name}" dir="${dist.dir}"/>
+        </zip>
+    </target>
+
+    <target name="arch_xml" description="Build XML archive">
+        <echo>Generating DataNucleus Access Platform (XML) archive</echo>
+        <property name="dist.dir" value="${basedir}/target/${archive.xml.name}"/>
+        <mkdir dir="${dist.dir}"/>
+        <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
+        <copy file="${basedir}/README.txt" todir="${dist.dir}"/>
+
+        <!-- Include all DataNucleus plugins. -->
+        <mkdir dir="${dist.dir}/lib"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-core" version="${datanucleus-core.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-xml" version="${datanucleus-xml.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-awtgeom" version="${datanucleus-awtgeom.version}"/>
+
+        <!-- Include all dependencies. -->
+        <mkdir dir="${dist.dir}/deps"/>
+        <copy-m1-jar reporoot="${deps_repo}/${jdo.group}" dest="${dist.dir}/deps"
+            artifact="${jdo.artifact}" version="${jdo.version}"/>
+        <copy file="${basedir}/licenses/jdo-api.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${geronimo_jpa.group}" dest="${dist.dir}/deps"
+            artifact="${geronimo_jpa.artifact}" version="${geronimo_jpa.version}"/>
+        <copy file="${basedir}/licenses/geronimo_jpa.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${geronimo_jta.group}" dest="${dist.dir}/deps"
+            artifact="${geronimo_jta.artifact}" version="${geronimo_jta.version}"/>
+        <copy file="${basedir}/licenses/geronimo_jta.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${ehcache.group}" dest="${dist.dir}/deps"
+            artifact="${ehcache.artifact}" version="${ehcache.version}"/>
+        <copy file="${basedir}/licenses/ehcache.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${log4j.group}" dest="${dist.dir}/deps"
+            artifact="${log4j.artifact}" version="${log4j.version}"/>
+        <copy file="${basedir}/licenses/log4j.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${jaxb.api.group}" dest="${dist.dir}/deps"
+            artifact="${jaxb.api.artifact}" version="${jaxb.api.version}"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${jaxb.impl.group}" dest="${dist.dir}/deps"
+            artifact="${jaxb.impl.artifact}" version="${jaxb.impl.version}"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${jodatime.group}" dest="${dist.dir}/deps"
+            artifact="${jodatime.artifact}" version="${jodatime.version}"/>
+        <copy file="${basedir}/licenses/jodatime.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${javaxtime.group}" dest="${dist.dir}/deps"
+            artifact="${javaxtime.artifact}" version="${javaxtime.version}"/>
+        <copy file="${basedir}/licenses/time-api.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${google.guava.group}" dest="${dist.dir}/deps"
+            artifact="${google.guava.artifact}" version="${google.guava.version}"/>
+        <copy file="${basedir}/licenses/google.guava.license.txt" todir="${dist.dir}/deps"/>
+
+        <!-- Include the tools -->
+        <mkdir dir="${dist.dir}/tools"/>
+        <copy todir="${dist.dir}/tools">
+            <fileset dir="tools"/>
+        </copy>
+
+        <!-- Include the tutorials -->
+
+        <!-- Create the zip -->
+        <zip zipfile="${basedir}/target/${archive.xml.name}.zip">
+            <zipfileset prefix="${archive.xml.name}" dir="${dist.dir}"/>
+        </zip>
+    </target>
+
+    <target name="arch_excel" description="Build Excel archive">
+        <echo>Generating DataNucleus Access Platform (Excel) archive</echo>
+        <property name="dist.dir" value="${basedir}/target/${archive.excel.name}"/>
+        <mkdir dir="${dist.dir}"/>
+        <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
+        <copy file="${basedir}/README.txt" todir="${dist.dir}"/>
+
+        <!-- Include all DataNucleus plugins. -->
+        <mkdir dir="${dist.dir}/lib"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-core" version="${datanucleus-core.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-excel" version="${datanucleus-excel.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-awtgeom" version="${datanucleus-awtgeom.version}"/>
+
+        <!-- Include all dependencies. -->
+        <mkdir dir="${dist.dir}/deps"/>
+        <copy-m1-jar reporoot="${deps_repo}/${jdo.group}" dest="${dist.dir}/deps"
+            artifact="${jdo.artifact}" version="${jdo.version}"/>
+        <copy file="${basedir}/licenses/jdo-api.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${geronimo_jpa.group}" dest="${dist.dir}/deps"
+            artifact="${geronimo_jpa.artifact}" version="${geronimo_jpa.version}"/>
+        <copy file="${basedir}/licenses/geronimo_jpa.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${geronimo_jta.group}" dest="${dist.dir}/deps"
+            artifact="${geronimo_jta.artifact}" version="${geronimo_jta.version}"/>
+        <copy file="${basedir}/licenses/geronimo_jta.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${ehcache.group}" dest="${dist.dir}/deps"
+            artifact="${ehcache.artifact}" version="${ehcache.version}"/>
+        <copy file="${basedir}/licenses/ehcache.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${log4j.group}" dest="${dist.dir}/deps"
+            artifact="${log4j.artifact}" version="${log4j.version}"/>
+        <copy file="${basedir}/licenses/log4j.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${poi.group}" dest="${dist.dir}/deps"
+            artifact="${poi.artifact}" version="${poi.version}"/>
+        <copy file="${basedir}/licenses/poi.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${poi.ooxml.group}" dest="${dist.dir}/deps"
+            artifact="${poi.ooxml.artifact}" version="${poi.ooxml.version}"/>
+        <copy file="${basedir}/licenses/poi.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${jodatime.group}" dest="${dist.dir}/deps"
+            artifact="${jodatime.artifact}" version="${jodatime.version}"/>
+        <copy file="${basedir}/licenses/jodatime.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${javaxtime.group}" dest="${dist.dir}/deps"
+            artifact="${javaxtime.artifact}" version="${javaxtime.version}"/>
+        <copy file="${basedir}/licenses/time-api.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${google.guava.group}" dest="${dist.dir}/deps"
+            artifact="${google.guava.artifact}" version="${google.guava.version}"/>
+        <copy file="${basedir}/licenses/google.guava.license.txt" todir="${dist.dir}/deps"/>
+
+        <!-- Include the tools -->
+        <mkdir dir="${dist.dir}/tools"/>
+        <copy todir="${dist.dir}/tools">
+            <fileset dir="tools"/>
+        </copy>
+
+        <!-- Include the tutorials -->
+
+        <!-- Create the zip -->
+        <zip zipfile="${basedir}/target/${archive.excel.name}.zip">
+            <zipfileset prefix="${archive.excel.name}" dir="${dist.dir}"/>
+        </zip>
+    </target>
+
+    <target name="arch_ldap" description="Build LDAP archive">
+        <echo>Generating DataNucleus Access Platform (LDAP) archive</echo>
+        <property name="dist.dir" value="${basedir}/target/${archive.ldap.name}"/>
+        <mkdir dir="${dist.dir}"/>
+        <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
+        <copy file="${basedir}/README.txt" todir="${dist.dir}"/>
+
+        <!-- Include all DataNucleus plugins. -->
+        <mkdir dir="${dist.dir}/lib"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-core" version="${datanucleus-core.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-ldap" version="${datanucleus-ldap.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-awtgeom" version="${datanucleus-awtgeom.version}"/>
+
+        <!-- Include all dependencies. -->
+        <mkdir dir="${dist.dir}/deps"/>
+        <copy-m1-jar reporoot="${deps_repo}/${jdo.group}" dest="${dist.dir}/deps"
+            artifact="${jdo.artifact}" version="${jdo.version}"/>
+        <copy file="${basedir}/licenses/jdo-api.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${geronimo_jpa.group}" dest="${dist.dir}/deps"
+            artifact="${geronimo_jpa.artifact}" version="${geronimo_jpa.version}"/>
+        <copy file="${basedir}/licenses/geronimo_jpa.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${geronimo_jta.group}" dest="${dist.dir}/deps"
+            artifact="${geronimo_jta.artifact}" version="${geronimo_jta.version}"/>
+        <copy file="${basedir}/licenses/geronimo_jta.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${ehcache.group}" dest="${dist.dir}/deps"
+            artifact="${ehcache.artifact}" version="${ehcache.version}"/>
+        <copy file="${basedir}/licenses/ehcache.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${log4j.group}" dest="${dist.dir}/deps"
+            artifact="${log4j.artifact}" version="${log4j.version}"/>
+        <copy file="${basedir}/licenses/log4j.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${slf4j.group}" dest="${dist.dir}/deps"
+            artifact="${slf4j.artifact}" version="${slf4j.version}"/>
+        <copy file="${basedir}/licenses/slf4j.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${slf4j_log4j.group}" dest="${dist.dir}/deps"
+            artifact="${slf4j_log4j.artifact}" version="${slf4j_log4j.version}"/>
+        <copy file="${basedir}/licenses/slf4j.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${jodatime.group}" dest="${dist.dir}/deps"
+            artifact="${jodatime.artifact}" version="${jodatime.version}"/>
+        <copy file="${basedir}/licenses/jodatime.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${javaxtime.group}" dest="${dist.dir}/deps"
+            artifact="${javaxtime.artifact}" version="${javaxtime.version}"/>
+        <copy file="${basedir}/licenses/time-api.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${google.guava.group}" dest="${dist.dir}/deps"
+            artifact="${google.guava.artifact}" version="${google.guava.version}"/>
+        <copy file="${basedir}/licenses/google.guava.license.txt" todir="${dist.dir}/deps"/>
+
+        <!-- Include the tools -->
+        <mkdir dir="${dist.dir}/tools"/>
+        <copy todir="${dist.dir}/tools">
+            <fileset dir="tools"/>
+        </copy>
+
+        <!-- Include the tutorials -->
+
+        <!-- Create the zip -->
+        <zip zipfile="${basedir}/target/${archive.ldap.name}.zip">
+            <zipfileset prefix="${archive.ldap.name}" dir="${dist.dir}"/>
+        </zip>
+    </target>
+
+    <target name="arch_odf" description="Build ODF archive">
+        <echo>Generating DataNucleus Access Platform (ODF) archive</echo>
+        <property name="dist.dir" value="${basedir}/target/${archive.odf.name}"/>
+        <mkdir dir="${dist.dir}"/>
+        <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
+        <copy file="${basedir}/README.txt" todir="${dist.dir}"/>
+
+        <!-- Include all DataNucleus plugins. -->
+        <mkdir dir="${dist.dir}/lib"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-core" version="${datanucleus-core.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-odf" version="${datanucleus-odf.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-awtgeom" version="${datanucleus-awtgeom.version}"/>
+
+        <!-- Include all dependencies. -->
+        <mkdir dir="${dist.dir}/deps"/>
+        <copy-m1-jar reporoot="${deps_repo}/${jdo.group}" dest="${dist.dir}/deps"
+            artifact="${jdo.artifact}" version="${jdo.version}"/>
+        <copy file="${basedir}/licenses/jdo-api.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${geronimo_jpa.group}" dest="${dist.dir}/deps"
+            artifact="${geronimo_jpa.artifact}" version="${geronimo_jpa.version}"/>
+        <copy file="${basedir}/licenses/geronimo_jpa.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${geronimo_jta.group}" dest="${dist.dir}/deps"
+            artifact="${geronimo_jta.artifact}" version="${geronimo_jta.version}"/>
+        <copy file="${basedir}/licenses/geronimo_jta.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${ehcache.group}" dest="${dist.dir}/deps"
+            artifact="${ehcache.artifact}" version="${ehcache.version}"/>
+        <copy file="${basedir}/licenses/ehcache.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${log4j.group}" dest="${dist.dir}/deps"
+            artifact="${log4j.artifact}" version="${log4j.version}"/>
+        <copy file="${basedir}/licenses/log4j.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${odfdom.group}" dest="${dist.dir}/deps"
+            artifact="${odfdom.artifact}" version="${odfdom.version}"/>
+        <copy file="${basedir}/licenses/odfdom.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${xerces.group}" dest="${dist.dir}/deps"
+            artifact="${xerces.artifact}" version="${xerces.version}"/>
+        <copy file="${basedir}/licenses/xerces.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${jodatime.group}" dest="${dist.dir}/deps"
+            artifact="${jodatime.artifact}" version="${jodatime.version}"/>
+        <copy file="${basedir}/licenses/jodatime.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${javaxtime.group}" dest="${dist.dir}/deps"
+            artifact="${javaxtime.artifact}" version="${javaxtime.version}"/>
+        <copy file="${basedir}/licenses/time-api.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${google.guava.group}" dest="${dist.dir}/deps"
+            artifact="${google.guava.artifact}" version="${google.guava.version}"/>
+        <copy file="${basedir}/licenses/google.guava.license.txt" todir="${dist.dir}/deps"/>
+
+        <!-- Include the tools -->
+        <mkdir dir="${dist.dir}/tools"/>
+        <copy todir="${dist.dir}/tools">
+            <fileset dir="tools"/>
+        </copy>
+
+        <!-- Include the tutorials -->
+
+        <!-- Create the zip -->
+        <zip zipfile="${basedir}/target/${archive.odf.name}.zip">
+            <zipfileset prefix="${archive.odf.name}" dir="${dist.dir}"/>
+        </zip>
+    </target>
+
+    <target name="arch_hbase" description="Build HBase archive">
+        <echo>Generating DataNucleus Access Platform (HBase) archive</echo>
+        <property name="dist.dir" value="${basedir}/target/${archive.hbase.name}"/>
+        <mkdir dir="${dist.dir}"/>
+        <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
+        <copy file="${basedir}/README.txt" todir="${dist.dir}"/>
+
+        <!-- Include all DataNucleus plugins. -->
+        <mkdir dir="${dist.dir}/lib"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-core" version="${datanucleus-core.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-hbase" version="${datanucleus-hbase.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-awtgeom" version="${datanucleus-awtgeom.version}"/>
+
+        <!-- Include all dependencies. -->
+        <mkdir dir="${dist.dir}/deps"/>
+        <copy-m1-jar reporoot="${deps_repo}/${jdo.group}" dest="${dist.dir}/deps"
+            artifact="${jdo.artifact}" version="${jdo.version}"/>
+        <copy file="${basedir}/licenses/jdo-api.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${geronimo_jpa.group}" dest="${dist.dir}/deps"
+            artifact="${geronimo_jpa.artifact}" version="${geronimo_jpa.version}"/>
+        <copy file="${basedir}/licenses/geronimo_jpa.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${geronimo_jta.group}" dest="${dist.dir}/deps"
+            artifact="${geronimo_jta.artifact}" version="${geronimo_jta.version}"/>
+        <copy file="${basedir}/licenses/geronimo_jta.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${ehcache.group}" dest="${dist.dir}/deps"
+            artifact="${ehcache.artifact}" version="${ehcache.version}"/>
+        <copy file="${basedir}/licenses/ehcache.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${log4j.group}" dest="${dist.dir}/deps"
+            artifact="${log4j.artifact}" version="${log4j.version}"/>
+        <copy file="${basedir}/licenses/log4j.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${hbase.group}" dest="${dist.dir}/deps"
+            artifact="${hbase.artifact}" version="${hbase.version}"/>
+        <copy file="${basedir}/licenses/hbase.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${hadoop.core.group}" dest="${dist.dir}/deps"
+            artifact="${hadoop.core.artifact}" version="${hadoop.core.version}"/>
+        <copy file="${basedir}/licenses/hadoop.core.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${jodatime.group}" dest="${dist.dir}/deps"
+            artifact="${jodatime.artifact}" version="${jodatime.version}"/>
+        <copy file="${basedir}/licenses/jodatime.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${javaxtime.group}" dest="${dist.dir}/deps"
+            artifact="${javaxtime.artifact}" version="${javaxtime.version}"/>
+        <copy file="${basedir}/licenses/time-api.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${google.guava.group}" dest="${dist.dir}/deps"
+            artifact="${google.guava.artifact}" version="${google.guava.version}"/>
+        <copy file="${basedir}/licenses/google.guava.license.txt" todir="${dist.dir}/deps"/>
+
+        <!-- Include the tools -->
+        <mkdir dir="${dist.dir}/tools"/>
+        <copy todir="${dist.dir}/tools">
+            <fileset dir="tools"/>
+        </copy>
+
+        <!-- Include the tutorials -->
+
+        <!-- Create the zip -->
+        <zip zipfile="${basedir}/target/${archive.hbase.name}.zip">
+            <zipfileset prefix="${archive.hbase.name}" dir="${dist.dir}"/>
+        </zip>
+    </target>
+
+    <target name="arch_mongodb" description="Build MongoDB archive">
+        <echo>Generating DataNucleus Access Platform (MongoDB) archive</echo>
+        <property name="dist.dir" value="${basedir}/target/${archive.mongodb.name}"/>
+        <mkdir dir="${dist.dir}"/>
+        <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
+        <copy file="${basedir}/README.txt" todir="${dist.dir}"/>
+
+        <!-- Include all DataNucleus plugins. -->
+        <mkdir dir="${dist.dir}/lib"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-core" version="${datanucleus-core.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-mongodb" version="${datanucleus-mongodb.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-awtgeom" version="${datanucleus-awtgeom.version}"/>
+
+        <!-- Include all dependencies. -->
+        <mkdir dir="${dist.dir}/deps"/>
+        <copy-m1-jar reporoot="${deps_repo}/${jdo.group}" dest="${dist.dir}/deps"
+            artifact="${jdo.artifact}" version="${jdo.version}"/>
+        <copy file="${basedir}/licenses/jdo-api.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${geronimo_jpa.group}" dest="${dist.dir}/deps"
+            artifact="${geronimo_jpa.artifact}" version="${geronimo_jpa.version}"/>
+        <copy file="${basedir}/licenses/geronimo_jpa.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${geronimo_jta.group}" dest="${dist.dir}/deps"
+            artifact="${geronimo_jta.artifact}" version="${geronimo_jta.version}"/>
+        <copy file="${basedir}/licenses/geronimo_jta.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${ehcache.group}" dest="${dist.dir}/deps"
+            artifact="${ehcache.artifact}" version="${ehcache.version}"/>
+        <copy file="${basedir}/licenses/ehcache.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${log4j.group}" dest="${dist.dir}/deps"
+            artifact="${log4j.artifact}" version="${log4j.version}"/>
+        <copy file="${basedir}/licenses/log4j.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${mongodb.group}" dest="${dist.dir}/deps"
+            artifact="${mongodb.artifact}" version="${mongodb.version}"/>
+        <copy file="${basedir}/licenses/mongodb.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${jodatime.group}" dest="${dist.dir}/deps"
+            artifact="${jodatime.artifact}" version="${jodatime.version}"/>
+        <copy file="${basedir}/licenses/jodatime.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${javaxtime.group}" dest="${dist.dir}/deps"
+            artifact="${javaxtime.artifact}" version="${javaxtime.version}"/>
+        <copy file="${basedir}/licenses/time-api.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${google.guava.group}" dest="${dist.dir}/deps"
+            artifact="${google.guava.artifact}" version="${google.guava.version}"/>
+        <copy file="${basedir}/licenses/google.guava.license.txt" todir="${dist.dir}/deps"/>
+
+        <!-- Include the tools -->
+        <mkdir dir="${dist.dir}/tools"/>
+        <copy todir="${dist.dir}/tools">
+            <fileset dir="tools"/>
+        </copy>
+
+        <!-- Include the tutorials -->
+
+        <!-- Create the zip -->
+        <zip zipfile="${basedir}/target/${archive.mongodb.name}.zip">
+            <zipfileset prefix="${archive.mongodb.name}" dir="${dist.dir}"/>
+        </zip>
+    </target>
+
+    <target name="arch_neo4j" description="Build Neo4j archive">
+        <echo>Generating DataNucleus Access Platform (Neo4j) archive</echo>
+        <property name="dist.dir" value="${basedir}/target/${archive.neo4j.name}"/>
+        <mkdir dir="${dist.dir}"/>
+        <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
+        <copy file="${basedir}/README.txt" todir="${dist.dir}"/>
+
+        <!-- Include all DataNucleus plugins. -->
+        <mkdir dir="${dist.dir}/lib"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-core" version="${datanucleus-core.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-neo4j" version="${datanucleus-neo4j.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-awtgeom" version="${datanucleus-awtgeom.version}"/>
+
+        <!-- Include all dependencies. -->
+        <mkdir dir="${dist.dir}/deps"/>
+        <copy-m1-jar reporoot="${deps_repo}/${jdo.group}" dest="${dist.dir}/deps"
+            artifact="${jdo.artifact}" version="${jdo.version}"/>
+        <copy file="${basedir}/licenses/jdo-api.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${geronimo_jpa.group}" dest="${dist.dir}/deps"
+            artifact="${geronimo_jpa.artifact}" version="${geronimo_jpa.version}"/>
+        <copy file="${basedir}/licenses/geronimo_jpa.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${geronimo_jta.group}" dest="${dist.dir}/deps"
+            artifact="${geronimo_jta.artifact}" version="${geronimo_jta.version}"/>
+        <copy file="${basedir}/licenses/geronimo_jta.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${ehcache.group}" dest="${dist.dir}/deps"
+            artifact="${ehcache.artifact}" version="${ehcache.version}"/>
+        <copy file="${basedir}/licenses/ehcache.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${log4j.group}" dest="${dist.dir}/deps"
+            artifact="${log4j.artifact}" version="${log4j.version}"/>
+        <copy file="${basedir}/licenses/log4j.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${neo4j.kernel.group}" dest="${dist.dir}/deps"
+            artifact="${neo4j.kernel.artifact}" version="${neo4j.kernel.version}"/>
+        <copy file="${basedir}/licenses/neo4j.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${neo4j.cypher.group}" dest="${dist.dir}/deps"
+            artifact="${neo4j.cypher.artifact}" version="${neo4j.cypher.version}"/>
+        <copy file="${basedir}/licenses/neo4j.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${jodatime.group}" dest="${dist.dir}/deps"
+            artifact="${jodatime.artifact}" version="${jodatime.version}"/>
+        <copy file="${basedir}/licenses/jodatime.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${javaxtime.group}" dest="${dist.dir}/deps"
+            artifact="${javaxtime.artifact}" version="${javaxtime.version}"/>
+        <copy file="${basedir}/licenses/time-api.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${google.guava.group}" dest="${dist.dir}/deps"
+            artifact="${google.guava.artifact}" version="${google.guava.version}"/>
+        <copy file="${basedir}/licenses/google.guava.license.txt" todir="${dist.dir}/deps"/>
+
+        <!-- Include the tools -->
+        <mkdir dir="${dist.dir}/tools"/>
+        <copy todir="${dist.dir}/tools">
+            <fileset dir="tools"/>
+        </copy>
+
+        <!-- Include the tutorials -->
+
+        <!-- Create the zip -->
+        <zip zipfile="${basedir}/target/${archive.neo4j.name}.zip">
+            <zipfileset prefix="${archive.neo4j.name}" dir="${dist.dir}"/>
+        </zip>
+    </target>
+
+    <target name="arch_neodatis" description="Build NeoDatis archive">
+        <echo>Generating DataNucleus Access Platform (NeoDatis) archive</echo>
+        <property name="dist.dir" value="${basedir}/target/${archive.neodatis.name}"/>
+        <mkdir dir="${dist.dir}"/>
+        <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
+        <copy file="${basedir}/README.txt" todir="${dist.dir}"/>
+
+        <!-- Include all DataNucleus plugins. -->
+        <mkdir dir="${dist.dir}/lib"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-core" version="${datanucleus-core.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-neodatis" version="${datanucleus-neodatis.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-awtgeom" version="${datanucleus-awtgeom.version}"/>
+
+        <!-- Include all dependencies. -->
+        <mkdir dir="${dist.dir}/deps"/>
+        <copy-m1-jar reporoot="${deps_repo}/${jdo.group}" dest="${dist.dir}/deps"
+            artifact="${jdo.artifact}" version="${jdo.version}"/>
+        <copy file="${basedir}/licenses/jdo-api.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${geronimo_jpa.group}" dest="${dist.dir}/deps"
+            artifact="${geronimo_jpa.artifact}" version="${geronimo_jpa.version}"/>
+        <copy file="${basedir}/licenses/geronimo_jpa.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${geronimo_jta.group}" dest="${dist.dir}/deps"
+            artifact="${geronimo_jta.artifact}" version="${geronimo_jta.version}"/>
+        <copy file="${basedir}/licenses/geronimo_jta.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${ehcache.group}" dest="${dist.dir}/deps"
+            artifact="${ehcache.artifact}" version="${ehcache.version}"/>
+        <copy file="${basedir}/licenses/ehcache.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${log4j.group}" dest="${dist.dir}/deps"
+            artifact="${log4j.artifact}" version="${log4j.version}"/>
+        <copy file="${basedir}/licenses/log4j.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${neodatis.group}" dest="${dist.dir}/deps"
+            artifact="${neodatis.artifact}" version="${neodatis.version}"/>
+        <copy file="${basedir}/licenses/neodatis.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${jodatime.group}" dest="${dist.dir}/deps"
+            artifact="${jodatime.artifact}" version="${jodatime.version}"/>
+        <copy file="${basedir}/licenses/jodatime.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${javaxtime.group}" dest="${dist.dir}/deps"
+            artifact="${javaxtime.artifact}" version="${javaxtime.version}"/>
+        <copy file="${basedir}/licenses/time-api.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${google.guava.group}" dest="${dist.dir}/deps"
+            artifact="${google.guava.artifact}" version="${google.guava.version}"/>
+        <copy file="${basedir}/licenses/google.guava.license.txt" todir="${dist.dir}/deps"/>
+
+        <!-- Include the tools -->
+        <mkdir dir="${dist.dir}/tools"/>
+        <copy todir="${dist.dir}/tools">
+            <fileset dir="tools"/>
+        </copy>
+
+        <!-- Include the tutorials -->
+
+        <!-- Create the zip -->
+        <zip zipfile="${basedir}/target/${archive.neodatis.name}.zip">
+            <zipfileset prefix="${archive.neodatis.name}" dir="${dist.dir}"/>
+        </zip>
+    </target>
+
+    <target name="arch_deps" description="Build dependencies archive">
+        <echo>Generating DataNucleus Access Platform (deps) archive</echo>
+        <property name="dist.dir" value="${basedir}/target/${archive.deps.name}"/>
+        <mkdir dir="${dist.dir}"/>
+        <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
+        <copy file="${basedir}/README.txt" todir="${dist.dir}"/>
+
+        <!-- Include all DataNucleus plugins. -->
+        <mkdir dir="${dist.dir}/lib"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-core" version="${datanucleus-core.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-rdbms" version="${datanucleus-rdbms.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-neodatis" version="${datanucleus-neodatis.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-excel" version="${datanucleus-excel.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-xml" version="${datanucleus-xml.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-ldap" version="${datanucleus-ldap.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-json" version="${datanucleus-json.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-odf" version="${datanucleus-odf.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-hbase" version="${datanucleus-hbase.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-mongodb" version="${datanucleus-mongodb.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-rest" version="${datanucleus-api-rest.version}"/>
+        <!--copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-json" version="${datanucleus-api-json.version}"/-->
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-spatial" version="${datanucleus-spatial.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-awtgeom" version="${datanucleus-awtgeom.version}"/>
+
+        <!-- Include all dependencies. -->
+        <mkdir dir="${dist.dir}/deps"/>
+        <copy-m1-jar reporoot="${deps_repo}/${jdo.group}" dest="${dist.dir}/deps"
+            artifact="${jdo.artifact}" version="${jdo.version}"/>
+        <copy file="${basedir}/licenses/jdo-api.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${geronimo_jpa.group}" dest="${dist.dir}/deps"
+            artifact="${geronimo_jpa.artifact}" version="${geronimo_jpa.version}"/>
+        <copy file="${basedir}/licenses/geronimo_jpa.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${geronimo_jta.group}" dest="${dist.dir}/deps"
+            artifact="${geronimo_jta.artifact}" version="${geronimo_jta.version}"/>
+        <copy file="${basedir}/licenses/geronimo_jta.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${ehcache.group}" dest="${dist.dir}/deps"
+            artifact="${ehcache.artifact}" version="${ehcache.version}"/>
+        <copy file="${basedir}/licenses/ehcache.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${log4j.group}" dest="${dist.dir}/deps"
+            artifact="${log4j.artifact}" version="${log4j.version}"/>
+        <copy file="${basedir}/licenses/log4j.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${poi.group}" dest="${dist.dir}/deps"
+            artifact="${poi.artifact}" version="${poi.version}"/>
+        <copy file="${basedir}/licenses/poi.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${poi.ooxml.group}" dest="${dist.dir}/deps"
+            artifact="${poi.ooxml.artifact}" version="${poi.ooxml.version}"/>
+        <copy file="${basedir}/licenses/poi.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${jaxb.api.group}" dest="${dist.dir}/deps"
+            artifact="${jaxb.api.artifact}" version="${jaxb.api.version}"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${jaxb.impl.group}" dest="${dist.dir}/deps"
+            artifact="${jaxb.impl.artifact}" version="${jaxb.impl.version}"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${h2.group}" dest="${dist.dir}/deps"
+            artifact="${h2.artifact}" version="${h2.version}"/>
+        <copy file="${basedir}/licenses/h2.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${neodatis.group}" dest="${dist.dir}/deps"
+            artifact="${neodatis.artifact}" version="${neodatis.version}"/>
+        <copy file="${basedir}/licenses/neodatis.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${slf4j.group}" dest="${dist.dir}/deps"
+            artifact="${slf4j.artifact}" version="${slf4j.version}"/>
+        <copy file="${basedir}/licenses/slf4j.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${slf4j_log4j.group}" dest="${dist.dir}/deps"
+            artifact="${slf4j_log4j.artifact}" version="${slf4j_log4j.version}"/>
+        <copy file="${basedir}/licenses/slf4j.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${odfdom.group}" dest="${dist.dir}/deps"
+            artifact="${odfdom.artifact}" version="${odfdom.version}"/>
+        <copy file="${basedir}/licenses/odfdom.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${xerces.group}" dest="${dist.dir}/deps"
+            artifact="${xerces.artifact}" version="${xerces.version}"/>
+        <copy file="${basedir}/licenses/xerces.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${hbase.group}" dest="${dist.dir}/deps"
+            artifact="${hbase.artifact}" version="${hbase.version}"/>
+        <copy file="${basedir}/licenses/hbase.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${hadoop.core.group}" dest="${dist.dir}/deps"
+            artifact="${hadoop.core.artifact}" version="${hadoop.core.version}"/>
+        <copy file="${basedir}/licenses/hadoop.core.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${mongodb.group}" dest="${dist.dir}/deps"
+            artifact="${mongodb.artifact}" version="${mongodb.version}"/>
+        <copy file="${basedir}/licenses/mongodb.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${jodatime.group}" dest="${dist.dir}/deps"
+            artifact="${jodatime.artifact}" version="${jodatime.version}"/>
+        <copy file="${basedir}/licenses/jodatime.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${javaxtime.group}" dest="${dist.dir}/deps"
+            artifact="${javaxtime.artifact}" version="${javaxtime.version}"/>
+        <copy file="${basedir}/licenses/time-api.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m1-jar reporoot="${deps_repo}/${google.guava.group}" dest="${dist.dir}/deps"
+            artifact="${google.guava.artifact}" version="${google.guava.version}"/>
+        <copy file="${basedir}/licenses/google.guava.license.txt" todir="${dist.dir}/deps"/>
+
+        <!-- Include the tools -->
+        <mkdir dir="${dist.dir}/tools"/>
+        <copy todir="${dist.dir}/tools">
+            <fileset dir="tools"/>
+        </copy>
+
+        <!-- Include the tutorials -->
+
+        <!-- Create the zip -->
+        <zip zipfile="${basedir}/target/${archive.deps.name}.zip">
+            <zipfileset prefix="${archive.deps.name}" dir="${dist.dir}"/>
+        </zip>
+    </target>
+
+    <target name="arch_nodeps" description="Build no-dependencies archive">
+        <echo>Generating DataNucleus Access Platform (no-deps) archive</echo>
+        <property name="dist.dir" value="${basedir}/target/${archive.nodeps.name}"/>
+        <mkdir dir="${dist.dir}"/>
+        <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
+        <copy file="${basedir}/README.txt" todir="${dist.dir}"/>
+
+        <!-- Include all DataNucleus plugins. -->
+        <mkdir dir="${dist.dir}/lib"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-core" version="${datanucleus-core.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-rdbms" version="${datanucleus-rdbms.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-neodatis" version="${datanucleus-neodatis.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-excel" version="${datanucleus-excel.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-xml" version="${datanucleus-xml.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-ldap" version="${datanucleus-ldap.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-json" version="${datanucleus-json.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-odf" version="${datanucleus-odf.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-hbase" version="${datanucleus-hbase.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-mongodb" version="${datanucleus-mongodb.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-rest" version="${datanucleus-api-rest.version}"/>
+        <!--copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-api-json" version="${datanucleus-api-json.version}"/-->
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-spatial" version="${datanucleus-spatial.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
+        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
+            artifact="datanucleus-awtgeom" version="${datanucleus-awtgeom.version}"/>
+
+        <!-- Include the tools -->
+        <mkdir dir="${dist.dir}/tools"/>
+        <copy todir="${dist.dir}/tools">
+            <fileset dir="tools"/>
+        </copy>
+
+        <!-- Include the tutorials -->
+
+        <!-- Create the zip -->
+        <zip zipfile="${basedir}/target/${archive.nodeps.name}.zip">
+            <zipfileset prefix="${archive.nodeps.name}" dir="${dist.dir}"/>
+        </zip>
+    </target>
+</project>

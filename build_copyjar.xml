@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<antlib>
+    <!-- Macro to copy a jar from a Maven2 repository to the supplied directory. -->
+    <macrodef name="copy-m2-jar">
+        <attribute name="reporoot" description="Root of the group within the M2 repo"/>
+        <attribute name="artifact" description="Artifact id"/>
+        <attribute name="version" description="Version"/>
+        <attribute name="dest" description="Destination directory"/>
+        <sequential>
+            <copy file="@{reporoot}/@{artifact}/@{version}/@{artifact}-@{version}.jar" todir="@{dest}"/>
+        </sequential>
+    </macrodef>
+
+    <!-- Macro to copy a jar from a Maven1 repository to the supplied directory. -->
+    <macrodef name="copy-m1-jar">
+        <attribute name="reporoot" description="Root of the group within the M1 repo"/>
+        <attribute name="artifact" description="Artifact id"/>
+        <attribute name="version" description="Version"/>
+        <attribute name="dest" description="Destination directory"/>
+        <sequential>
+            <copy file="@{reporoot}/jars/@{artifact}-@{version}.jar" todir="@{dest}"/>
+        </sequential>
+    </macrodef>
+</antlib>

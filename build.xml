@@ -47,13 +47,11 @@
         <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
             artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
         <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
-            artifact="datanucleus-spatial" version="${datanucleus-spatial.version}"/>
+            artifact="datanucleus-geospatial" version="${datanucleus-geospatial.version}"/>
         <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
             artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
             artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
-        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
-            artifact="datanucleus-awtgeom" version="${datanucleus-awtgeom.version}"/>
 
         <!-- Include all dependencies. -->
         <mkdir dir="${dist.dir}/deps"/>
@@ -134,8 +132,6 @@
             artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
             artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
-        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
-            artifact="datanucleus-awtgeom" version="${datanucleus-awtgeom.version}"/>
 
         <!-- Include all dependencies. -->
         <mkdir dir="${dist.dir}/deps"/>
@@ -218,8 +214,6 @@
             artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
             artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
-        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
-            artifact="datanucleus-awtgeom" version="${datanucleus-awtgeom.version}"/>
 
         <!-- Include all dependencies. -->
         <mkdir dir="${dist.dir}/deps"/>
@@ -304,8 +298,6 @@
             artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
             artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
-        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
-            artifact="datanucleus-awtgeom" version="${datanucleus-awtgeom.version}"/>
 
         <!-- Include all dependencies. -->
         <mkdir dir="${dist.dir}/deps"/>
@@ -390,8 +382,6 @@
             artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
             artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
-        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
-            artifact="datanucleus-awtgeom" version="${datanucleus-awtgeom.version}"/>
 
         <!-- Include all dependencies. -->
         <mkdir dir="${dist.dir}/deps"/>
@@ -476,8 +466,6 @@
             artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
             artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
-        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
-            artifact="datanucleus-awtgeom" version="${datanucleus-awtgeom.version}"/>
 
         <!-- Include all dependencies. -->
         <mkdir dir="${dist.dir}/deps"/>
@@ -562,8 +550,6 @@
             artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
             artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
-        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
-            artifact="datanucleus-awtgeom" version="${datanucleus-awtgeom.version}"/>
 
         <!-- Include all dependencies. -->
         <mkdir dir="${dist.dir}/deps"/>
@@ -644,8 +630,6 @@
             artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
             artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
-        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
-            artifact="datanucleus-awtgeom" version="${datanucleus-awtgeom.version}"/>
 
         <!-- Include all dependencies. -->
         <mkdir dir="${dist.dir}/deps"/>
@@ -730,8 +714,6 @@
             artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
             artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
-        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
-            artifact="datanucleus-awtgeom" version="${datanucleus-awtgeom.version}"/>
 
         <!-- Include all dependencies. -->
         <mkdir dir="${dist.dir}/deps"/>
@@ -829,13 +811,11 @@
         <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
             artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
         <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
-            artifact="datanucleus-spatial" version="${datanucleus-spatial.version}"/>
+            artifact="datanucleus-geospatial" version="${datanucleus-geospatial.version}"/>
         <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
             artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
             artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
-        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
-            artifact="datanucleus-awtgeom" version="${datanucleus-awtgeom.version}"/>
 
         <!-- Include all dependencies. -->
         <mkdir dir="${dist.dir}/deps"/>
@@ -979,13 +959,11 @@
         <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
             artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
         <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
-            artifact="datanucleus-spatial" version="${datanucleus-spatial.version}"/>
+            artifact="datanucleus-geospatial" version="${datanucleus-geospatial.version}"/>
         <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
             artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
             artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
-        <copy-m2-jar reporoot="${dn_reporoot}" dest="${dist.dir}/lib"
-            artifact="datanucleus-awtgeom" version="${datanucleus-awtgeom.version}"/>
 
         <!-- Include the tools -->
         <mkdir dir="${dist.dir}/tools"/>

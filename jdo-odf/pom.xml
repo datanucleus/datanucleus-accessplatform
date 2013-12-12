@@ -13,7 +13,6 @@
     <version>3.3.6-SNAPSHOT</version>
     <name>DataNucleus JDO ODF Library</name>
     <description>DataNucleus AccessPlatform libraries for JDO use with ODF</description>
-    <url>http://www.datanucleus.org</url>
 
     <dependencies>
         <dependency>

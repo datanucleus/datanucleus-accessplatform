@@ -12,7 +12,6 @@
     <packaging>pom</packaging>
     <name>DataNucleus JDO HBase Library</name>
     <description>DataNucleus AccessPlatform libraries for JDO use with HBase</description>
-    <url>http://www.datanucleus.org</url>
 
     <dependencies>
         <dependency>

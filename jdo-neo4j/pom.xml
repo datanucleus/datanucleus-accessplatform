@@ -13,7 +13,6 @@
     <version>3.3.6-SNAPSHOT</version>
     <name>DataNucleus JDO Neo4j Library</name>
     <description>DataNucleus AccessPlatform libraries for JDO use with Neo4j</description>
-    <url>http://www.datanucleus.org</url>
 
     <dependencies>
         <dependency>

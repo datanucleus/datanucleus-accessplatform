@@ -13,7 +13,6 @@
     <version>3.3.6-SNAPSHOT</version>
     <name>DataNucleus JPA RDBMS Library</name>
     <description>DataNucleus AccessPlatform libraries for JPA use with RDBMS</description>
-    <url>http://www.datanucleus.org</url>
 
     <dependencies>
         <dependency>

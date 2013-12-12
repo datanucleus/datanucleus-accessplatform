@@ -37,8 +37,8 @@
 
     <scm>
         <connection>scm:git:git://github.com/datanucleus/datanucleus-accessplatform.git</connection>
-        <url>scm:git:git://github.com/datanucleus/datanucleus-accessplatform.git</url>
         <developerConnection>scm:git:git://github.com/datanucleus/datanucleus-accessplatform.git</developerConnection>
+        <url>scm:git:git://github.com/datanucleus/datanucleus-accessplatform</url>
     </scm>
 
     <developers>

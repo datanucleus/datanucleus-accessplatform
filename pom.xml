@@ -25,6 +25,7 @@
         <module>jdo-odf</module>
         <module>jdo-rdbms</module>
         <module>jdo-xml</module>
+
         <module>jpa-rdbms</module>
     </modules>
 
@@ -36,9 +37,9 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:git://github.com/datanucleus/datanucleus-accessplatform.git</connection>
-        <developerConnection>scm:git:git://github.com/datanucleus/datanucleus-accessplatform.git</developerConnection>
-        <url>scm:git:git://github.com/datanucleus/datanucleus-accessplatform</url>
+        <connection>scm:git:git@github.com:datanucleus/datanucleus-accessplatform.git</connection>
+        <developerConnection>scm:git:git@github.com:datanucleus/datanucleus-accessplatform.git</developerConnection>
+        <url>https://github.com/datanucleus/datanucleus-accessplatform</url>
     </scm>
 
     <developers>

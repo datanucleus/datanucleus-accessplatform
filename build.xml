@@ -83,10 +83,6 @@
             artifact="${jodatime.artifact}" version="${jodatime.version}"/>
         <copy file="${basedir}/licenses/jodatime.license.txt" todir="${dist.dir}/deps"/>
 
-        <copy-m1-jar reporoot="${deps_repo}/${javaxtime.group}" dest="${dist.dir}/deps"
-            artifact="${javaxtime.artifact}" version="${javaxtime.version}"/>
-        <copy file="${basedir}/licenses/time-api.license.txt" todir="${dist.dir}/deps"/>
-
         <copy-m1-jar reporoot="${deps_repo}/${google.guava.group}" dest="${dist.dir}/deps"
             artifact="${google.guava.artifact}" version="${google.guava.version}"/>
         <copy file="${basedir}/licenses/google.guava.license.txt" todir="${dist.dir}/deps"/>
@@ -164,10 +160,6 @@
         <copy-m1-jar reporoot="${deps_repo}/${jodatime.group}" dest="${dist.dir}/deps"
             artifact="${jodatime.artifact}" version="${jodatime.version}"/>
         <copy file="${basedir}/licenses/jodatime.license.txt" todir="${dist.dir}/deps"/>
-
-        <copy-m1-jar reporoot="${deps_repo}/${javaxtime.group}" dest="${dist.dir}/deps"
-            artifact="${javaxtime.artifact}" version="${javaxtime.version}"/>
-        <copy file="${basedir}/licenses/time-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m1-jar reporoot="${deps_repo}/${google.guava.group}" dest="${dist.dir}/deps"
             artifact="${google.guava.artifact}" version="${google.guava.version}"/>
@@ -249,10 +241,6 @@
             artifact="${jodatime.artifact}" version="${jodatime.version}"/>
         <copy file="${basedir}/licenses/jodatime.license.txt" todir="${dist.dir}/deps"/>
 
-        <copy-m1-jar reporoot="${deps_repo}/${javaxtime.group}" dest="${dist.dir}/deps"
-            artifact="${javaxtime.artifact}" version="${javaxtime.version}"/>
-        <copy file="${basedir}/licenses/time-api.license.txt" todir="${dist.dir}/deps"/>
-
         <copy-m1-jar reporoot="${deps_repo}/${google.guava.group}" dest="${dist.dir}/deps"
             artifact="${google.guava.artifact}" version="${google.guava.version}"/>
         <copy file="${basedir}/licenses/google.guava.license.txt" todir="${dist.dir}/deps"/>
@@ -332,10 +320,6 @@
         <copy-m1-jar reporoot="${deps_repo}/${jodatime.group}" dest="${dist.dir}/deps"
             artifact="${jodatime.artifact}" version="${jodatime.version}"/>
         <copy file="${basedir}/licenses/jodatime.license.txt" todir="${dist.dir}/deps"/>
-
-        <copy-m1-jar reporoot="${deps_repo}/${javaxtime.group}" dest="${dist.dir}/deps"
-            artifact="${javaxtime.artifact}" version="${javaxtime.version}"/>
-        <copy file="${basedir}/licenses/time-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m1-jar reporoot="${deps_repo}/${google.guava.group}" dest="${dist.dir}/deps"
             artifact="${google.guava.artifact}" version="${google.guava.version}"/>
@@ -417,10 +401,6 @@
             artifact="${jodatime.artifact}" version="${jodatime.version}"/>
         <copy file="${basedir}/licenses/jodatime.license.txt" todir="${dist.dir}/deps"/>
 
-        <copy-m1-jar reporoot="${deps_repo}/${javaxtime.group}" dest="${dist.dir}/deps"
-            artifact="${javaxtime.artifact}" version="${javaxtime.version}"/>
-        <copy file="${basedir}/licenses/time-api.license.txt" todir="${dist.dir}/deps"/>
-
         <copy-m1-jar reporoot="${deps_repo}/${google.guava.group}" dest="${dist.dir}/deps"
             artifact="${google.guava.artifact}" version="${google.guava.version}"/>
         <copy file="${basedir}/licenses/google.guava.license.txt" todir="${dist.dir}/deps"/>
@@ -501,10 +481,6 @@
             artifact="${jodatime.artifact}" version="${jodatime.version}"/>
         <copy file="${basedir}/licenses/jodatime.license.txt" todir="${dist.dir}/deps"/>
 
-        <copy-m1-jar reporoot="${deps_repo}/${javaxtime.group}" dest="${dist.dir}/deps"
-            artifact="${javaxtime.artifact}" version="${javaxtime.version}"/>
-        <copy file="${basedir}/licenses/time-api.license.txt" todir="${dist.dir}/deps"/>
-
         <copy-m1-jar reporoot="${deps_repo}/${google.guava.group}" dest="${dist.dir}/deps"
             artifact="${google.guava.artifact}" version="${google.guava.version}"/>
         <copy file="${basedir}/licenses/google.guava.license.txt" todir="${dist.dir}/deps"/>
@@ -580,10 +556,6 @@
         <copy-m1-jar reporoot="${deps_repo}/${jodatime.group}" dest="${dist.dir}/deps"
             artifact="${jodatime.artifact}" version="${jodatime.version}"/>
         <copy file="${basedir}/licenses/jodatime.license.txt" todir="${dist.dir}/deps"/>
-
-        <copy-m1-jar reporoot="${deps_repo}/${javaxtime.group}" dest="${dist.dir}/deps"
-            artifact="${javaxtime.artifact}" version="${javaxtime.version}"/>
-        <copy file="${basedir}/licenses/time-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m1-jar reporoot="${deps_repo}/${google.guava.group}" dest="${dist.dir}/deps"
             artifact="${google.guava.artifact}" version="${google.guava.version}"/>
@@ -665,10 +637,6 @@
             artifact="${jodatime.artifact}" version="${jodatime.version}"/>
         <copy file="${basedir}/licenses/jodatime.license.txt" todir="${dist.dir}/deps"/>
 
-        <copy-m1-jar reporoot="${deps_repo}/${javaxtime.group}" dest="${dist.dir}/deps"
-            artifact="${javaxtime.artifact}" version="${javaxtime.version}"/>
-        <copy file="${basedir}/licenses/time-api.license.txt" todir="${dist.dir}/deps"/>
-
         <copy-m1-jar reporoot="${deps_repo}/${google.guava.group}" dest="${dist.dir}/deps"
             artifact="${google.guava.artifact}" version="${google.guava.version}"/>
         <copy file="${basedir}/licenses/google.guava.license.txt" todir="${dist.dir}/deps"/>
@@ -744,10 +712,6 @@
         <copy-m1-jar reporoot="${deps_repo}/${jodatime.group}" dest="${dist.dir}/deps"
             artifact="${jodatime.artifact}" version="${jodatime.version}"/>
         <copy file="${basedir}/licenses/jodatime.license.txt" todir="${dist.dir}/deps"/>
-
-        <copy-m1-jar reporoot="${deps_repo}/${javaxtime.group}" dest="${dist.dir}/deps"
-            artifact="${javaxtime.artifact}" version="${javaxtime.version}"/>
-        <copy file="${basedir}/licenses/time-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m1-jar reporoot="${deps_repo}/${google.guava.group}" dest="${dist.dir}/deps"
             artifact="${google.guava.artifact}" version="${google.guava.version}"/>
@@ -892,10 +856,6 @@
         <copy-m1-jar reporoot="${deps_repo}/${jodatime.group}" dest="${dist.dir}/deps"
             artifact="${jodatime.artifact}" version="${jodatime.version}"/>
         <copy file="${basedir}/licenses/jodatime.license.txt" todir="${dist.dir}/deps"/>
-
-        <copy-m1-jar reporoot="${deps_repo}/${javaxtime.group}" dest="${dist.dir}/deps"
-            artifact="${javaxtime.artifact}" version="${javaxtime.version}"/>
-        <copy file="${basedir}/licenses/time-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m1-jar reporoot="${deps_repo}/${google.guava.group}" dest="${dist.dir}/deps"
             artifact="${google.guava.artifact}" version="${google.guava.version}"/>

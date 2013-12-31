@@ -27,7 +27,7 @@
         <property name="dist.dir" value="${basedir}/target/${archive.rdbms.name}"/>
         <mkdir dir="${dist.dir}"/>
         <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
-        <copy file="${basedir}/README.md" todir="${dist.dir}"/>
+        <copy file="${basedir}/README.txt" todir="${dist.dir}"/>
 
         <!-- Include all DataNucleus plugins. -->
         <mkdir dir="${dist.dir}/lib"/>
@@ -105,7 +105,7 @@
         <property name="dist.dir" value="${basedir}/target/${archive.xml.name}"/>
         <mkdir dir="${dist.dir}"/>
         <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
-        <copy file="${basedir}/README.md" todir="${dist.dir}"/>
+        <copy file="${basedir}/README.txt" todir="${dist.dir}"/>
 
         <!-- Include all DataNucleus plugins. -->
         <mkdir dir="${dist.dir}/lib"/>
@@ -183,7 +183,7 @@
         <property name="dist.dir" value="${basedir}/target/${archive.excel.name}"/>
         <mkdir dir="${dist.dir}"/>
         <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
-        <copy file="${basedir}/README.md" todir="${dist.dir}"/>
+        <copy file="${basedir}/README.txt" todir="${dist.dir}"/>
 
         <!-- Include all DataNucleus plugins. -->
         <mkdir dir="${dist.dir}/lib"/>
@@ -263,7 +263,7 @@
         <property name="dist.dir" value="${basedir}/target/${archive.ldap.name}"/>
         <mkdir dir="${dist.dir}"/>
         <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
-        <copy file="${basedir}/README.md" todir="${dist.dir}"/>
+        <copy file="${basedir}/README.txt" todir="${dist.dir}"/>
 
         <!-- Include all DataNucleus plugins. -->
         <mkdir dir="${dist.dir}/lib"/>
@@ -343,7 +343,7 @@
         <property name="dist.dir" value="${basedir}/target/${archive.odf.name}"/>
         <mkdir dir="${dist.dir}"/>
         <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
-        <copy file="${basedir}/README.md" todir="${dist.dir}"/>
+        <copy file="${basedir}/README.txt" todir="${dist.dir}"/>
 
         <!-- Include all DataNucleus plugins. -->
         <mkdir dir="${dist.dir}/lib"/>
@@ -423,7 +423,7 @@
         <property name="dist.dir" value="${basedir}/target/${archive.hbase.name}"/>
         <mkdir dir="${dist.dir}"/>
         <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
-        <copy file="${basedir}/README.md" todir="${dist.dir}"/>
+        <copy file="${basedir}/README.txt" todir="${dist.dir}"/>
 
         <!-- Include all DataNucleus plugins. -->
         <mkdir dir="${dist.dir}/lib"/>
@@ -503,7 +503,7 @@
         <property name="dist.dir" value="${basedir}/target/${archive.mongodb.name}"/>
         <mkdir dir="${dist.dir}"/>
         <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
-        <copy file="${basedir}/README.md" todir="${dist.dir}"/>
+        <copy file="${basedir}/README.txt" todir="${dist.dir}"/>
 
         <!-- Include all DataNucleus plugins. -->
         <mkdir dir="${dist.dir}/lib"/>
@@ -579,7 +579,7 @@
         <property name="dist.dir" value="${basedir}/target/${archive.neo4j.name}"/>
         <mkdir dir="${dist.dir}"/>
         <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
-        <copy file="${basedir}/README.md" todir="${dist.dir}"/>
+        <copy file="${basedir}/README.txt" todir="${dist.dir}"/>
 
         <!-- Include all DataNucleus plugins. -->
         <mkdir dir="${dist.dir}/lib"/>
@@ -659,7 +659,7 @@
         <property name="dist.dir" value="${basedir}/target/${archive.neodatis.name}"/>
         <mkdir dir="${dist.dir}"/>
         <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
-        <copy file="${basedir}/README.md" todir="${dist.dir}"/>
+        <copy file="${basedir}/README.txt" todir="${dist.dir}"/>
 
         <!-- Include all DataNucleus plugins. -->
         <mkdir dir="${dist.dir}/lib"/>
@@ -735,7 +735,7 @@
         <property name="dist.dir" value="${basedir}/target/${archive.deps.name}"/>
         <mkdir dir="${dist.dir}"/>
         <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
-        <copy file="${basedir}/README.md" todir="${dist.dir}"/>
+        <copy file="${basedir}/README.txt" todir="${dist.dir}"/>
 
         <!-- Include all DataNucleus plugins. -->
         <mkdir dir="${dist.dir}/lib"/>
@@ -877,7 +877,7 @@
         <property name="dist.dir" value="${basedir}/target/${archive.nodeps.name}"/>
         <mkdir dir="${dist.dir}"/>
         <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
-        <copy file="${basedir}/README.md" todir="${dist.dir}"/>
+        <copy file="${basedir}/README.txt" todir="${dist.dir}"/>
 
         <!-- Include all DataNucleus plugins. -->
         <mkdir dir="${dist.dir}/lib"/>

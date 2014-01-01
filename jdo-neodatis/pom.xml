@@ -10,7 +10,6 @@
     <groupId>org.datanucleus</groupId>
     <artifactId>datanucleus-accessplatform-jdo-neodatis</artifactId>
     <packaging>pom</packaging>
-    <version>3.3.6-SNAPSHOT</version>
     <name>DataNucleus JDO Neodatis Library</name>
     <description>DataNucleus AccessPlatform libraries for JDO use with Neodatis</description>
 
@@ -18,17 +17,17 @@
         <dependency>
             <groupId>javax.jdo</groupId>
             <artifactId>jdo-api</artifactId>
-            <version>3.0</version>
+            <version>3.1-rc1</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-core</artifactId>
-            <version>3.2.10</version>
+            <version>3.2.11</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-api-jdo</artifactId>
-            <version>3.2.6</version>
+            <version>3.2.7</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>

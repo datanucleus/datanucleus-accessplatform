@@ -60,7 +60,17 @@
                 <artifactId>wagon-ssh-external</artifactId> 
                 <version>2.2</version> 
             </extension> 
-        </extensions> 
+        </extensions>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <goals>deploy</goals>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
     <profiles>

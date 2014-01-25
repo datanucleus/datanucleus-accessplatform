@@ -24,7 +24,7 @@
     </target>
 
     <target name="arch_rdbms" description="Build RDBMS archive">
-        <echo>Generating DataNucleus Access Platform (RDBMS) archive</echo>
+        <echo>Generating DataNucleus AccessPlatform (RDBMS) archive</echo>
         <property name="dist.dir" value="${basedir}/target/${archive.rdbms.name}"/>
         <mkdir dir="${dist.dir}"/>
         <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
@@ -102,7 +102,7 @@
     </target>
 
     <target name="arch_xml" description="Build XML archive">
-        <echo>Generating DataNucleus Access Platform (XML) archive</echo>
+        <echo>Generating DataNucleus AccessPlatform (XML) archive</echo>
         <property name="dist.dir" value="${basedir}/target/${archive.xml.name}"/>
         <mkdir dir="${dist.dir}"/>
         <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
@@ -180,7 +180,7 @@
     </target>
 
     <target name="arch_excel" description="Build Excel archive">
-        <echo>Generating DataNucleus Access Platform (Excel) archive</echo>
+        <echo>Generating DataNucleus AccessPlatform (Excel) archive</echo>
         <property name="dist.dir" value="${basedir}/target/${archive.excel.name}"/>
         <mkdir dir="${dist.dir}"/>
         <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
@@ -260,7 +260,7 @@
     </target>
 
     <target name="arch_ldap" description="Build LDAP archive">
-        <echo>Generating DataNucleus Access Platform (LDAP) archive</echo>
+        <echo>Generating DataNucleus AccessPlatform (LDAP) archive</echo>
         <property name="dist.dir" value="${basedir}/target/${archive.ldap.name}"/>
         <mkdir dir="${dist.dir}"/>
         <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
@@ -340,7 +340,7 @@
     </target>
 
     <target name="arch_odf" description="Build ODF archive">
-        <echo>Generating DataNucleus Access Platform (ODF) archive</echo>
+        <echo>Generating DataNucleus AccessPlatform (ODF) archive</echo>
         <property name="dist.dir" value="${basedir}/target/${archive.odf.name}"/>
         <mkdir dir="${dist.dir}"/>
         <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
@@ -420,7 +420,7 @@
     </target>
 
     <target name="arch_json" description="Build JSON archive">
-        <echo>Generating DataNucleus Access Platform (JSON) archive</echo>
+        <echo>Generating DataNucleus AccessPlatform (JSON) archive</echo>
         <property name="dist.dir" value="${basedir}/target/${archive.json.name}"/>
         <mkdir dir="${dist.dir}"/>
         <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
@@ -492,7 +492,7 @@
     </target>
 
     <target name="arch_hbase" description="Build HBase archive">
-        <echo>Generating DataNucleus Access Platform (HBase) archive</echo>
+        <echo>Generating DataNucleus AccessPlatform (HBase) archive</echo>
         <property name="dist.dir" value="${basedir}/target/${archive.hbase.name}"/>
         <mkdir dir="${dist.dir}"/>
         <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
@@ -572,7 +572,7 @@
     </target>
 
     <target name="arch_mongodb" description="Build MongoDB archive">
-        <echo>Generating DataNucleus Access Platform (MongoDB) archive</echo>
+        <echo>Generating DataNucleus AccessPlatform (MongoDB) archive</echo>
         <property name="dist.dir" value="${basedir}/target/${archive.mongodb.name}"/>
         <mkdir dir="${dist.dir}"/>
         <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
@@ -647,8 +647,84 @@
         </zip>
     </target>
 
+    <target name="arch_cassandra" description="Build Cassandra archive">
+        <echo>Generating DataNucleus AccessPlatform (Cassandra) archive</echo>
+        <property name="dist.dir" value="${basedir}/target/${archive.cassandra.name}"/>
+        <mkdir dir="${dist.dir}"/>
+        <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
+        <copy file="${basedir}/README.txt" todir="${dist.dir}"/>
+
+        <!-- Include all DataNucleus plugins. -->
+        <mkdir dir="${dist.dir}/lib"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-core" version="${datanucleus-core.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-cassandra" version="${datanucleus-cassandra.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
+
+        <!-- Include all dependencies. -->
+        <mkdir dir="${dist.dir}/deps"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
+            group="${jdo.group}" artifact="${jdo.artifact}" version="${jdo.version}"/>
+        <copy file="${basedir}/licenses/jdo-api.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
+        	group="${geronimo_jpa.group}" artifact="${geronimo_jpa.artifact}" version="${geronimo_jpa.version}"/>
+        <copy file="${basedir}/licenses/geronimo_jpa.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
+        	group="${geronimo_jta.group}" artifact="${geronimo_jta.artifact}" version="${geronimo_jta.version}"/>
+        <copy file="${basedir}/licenses/geronimo_jta.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
+        	group="${ehcache.group}" artifact="${ehcache.artifact}" version="${ehcache.version}"/>
+        <copy file="${basedir}/licenses/ehcache.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
+        	group="${log4j.group}" artifact="${log4j.artifact}" version="${log4j.version}"/>
+        <copy file="${basedir}/licenses/log4j.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
+        	group="${jodatime.group}" artifact="${jodatime.artifact}" version="${jodatime.version}"/>
+        <copy file="${basedir}/licenses/jodatime.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
+        	group="${google.guava.group}" artifact="${google.guava.artifact}" version="${google.guava.version}"/>
+        <copy file="${basedir}/licenses/google.guava.license.txt" todir="${dist.dir}/deps"/>
+
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
+            group="${cassandra.group}" artifact="${cassandra.artifact}" version="${cassandra.version}"/>
+        <copy file="${basedir}/licenses/cassandra.license.txt" todir="${dist.dir}/deps"/>
+
+        <!-- Include the tools -->
+        <mkdir dir="${dist.dir}/tools"/>
+        <copy todir="${dist.dir}/tools">
+            <fileset dir="tools"/>
+        </copy>
+
+        <!-- Include the tutorials -->
+
+        <!-- Create the zip -->
+        <zip zipfile="${basedir}/target/${archive.cassandra.name}.zip">
+            <zipfileset prefix="${archive.cassandra.name}" dir="${dist.dir}"/>
+        </zip>
+    </target>
+
     <target name="arch_neo4j" description="Build Neo4j archive">
-        <echo>Generating DataNucleus Access Platform (Neo4j) archive</echo>
+        <echo>Generating DataNucleus AccessPlatform (Neo4j) archive</echo>
         <property name="dist.dir" value="${basedir}/target/${archive.neo4j.name}"/>
         <mkdir dir="${dist.dir}"/>
         <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
@@ -728,7 +804,7 @@
     </target>
 
     <target name="arch_neodatis" description="Build NeoDatis archive">
-        <echo>Generating DataNucleus Access Platform (NeoDatis) archive</echo>
+        <echo>Generating DataNucleus AccessPlatform (NeoDatis) archive</echo>
         <property name="dist.dir" value="${basedir}/target/${archive.neodatis.name}"/>
         <mkdir dir="${dist.dir}"/>
         <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
@@ -804,7 +880,7 @@
     </target>
 
     <target name="arch_deps" description="Build dependencies archive">
-        <echo>Generating DataNucleus Access Platform (deps) archive</echo>
+        <echo>Generating DataNucleus AccessPlatform (deps) archive</echo>
         <property name="dist.dir" value="${basedir}/target/${archive.deps.name}"/>
         <mkdir dir="${dist.dir}"/>
         <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>
@@ -946,7 +1022,7 @@
     </target>
 
     <target name="arch_nodeps" description="Build no-dependencies archive">
-        <echo>Generating DataNucleus Access Platform (no-deps) archive</echo>
+        <echo>Generating DataNucleus AccessPlatform (no-deps) archive</echo>
         <property name="dist.dir" value="${basedir}/target/${archive.nodeps.name}"/>
         <mkdir dir="${dist.dir}"/>
         <copy file="${basedir}/LICENSE.txt" todir="${dist.dir}"/>

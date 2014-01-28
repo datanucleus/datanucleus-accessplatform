@@ -11,6 +11,7 @@
     <target name="archive" description="build archives" depends="clean">
         <antcall target="arch_nodeps"/>
         <antcall target="arch_deps"/>
+        <antcall target="arch_cassandra"/>
         <antcall target="arch_excel"/>
         <antcall target="arch_ldap"/>
         <antcall target="arch_hbase"/>
@@ -899,6 +900,8 @@
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-cassandra" version="${datanucleus-cassandra.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-rdbms" version="${datanucleus-rdbms.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-neodatis" version="${datanucleus-neodatis.version}"/>
@@ -1007,6 +1010,10 @@
             group="${mongodb.group}" artifact="${mongodb.artifact}" version="${mongodb.version}"/>
         <copy file="${basedir}/licenses/mongodb.license.txt" todir="${dist.dir}/deps"/>
 
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
+            group="${cassandra.group}" artifact="${cassandra.artifact}" version="${cassandra.version}"/>
+        <copy file="${basedir}/licenses/cassandra.license.txt" todir="${dist.dir}/deps"/>
+
         <!-- Include the tools -->
         <mkdir dir="${dist.dir}/tools"/>
         <copy todir="${dist.dir}/tools">
@@ -1040,6 +1047,8 @@
         	group="${datanucleus.group}" artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-cassandra" version="${datanucleus-cassandra.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-rdbms" version="${datanucleus-rdbms.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"

@@ -10,10 +10,10 @@
 
     <packaging>pom</packaging>
     <groupId>org.datanucleus</groupId>
-    <artifactId>datanucleus-accessplatform-jdo-excel</artifactId>
+    <artifactId>datanucleus-accessplatform-jdo-cassandra</artifactId>
 
-    <name>DataNucleus JDO Excel Library</name>
-    <description>DataNucleus AccessPlatform libraries for JDO use with Excel</description>
+    <name>DataNucleus JDO Cassandra Library</name>
+    <description>DataNucleus AccessPlatform libraries for JDO use with Cassandra</description>
 
     <dependencies>
         <dependency>
@@ -38,7 +38,7 @@
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
-            <artifactId>datanucleus-excel</artifactId>
+            <artifactId>datanucleus-cassandra</artifactId>
             <version>4.0.0-m1</version>
         </dependency>
     </dependencies>

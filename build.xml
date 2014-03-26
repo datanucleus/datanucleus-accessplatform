@@ -50,6 +50,8 @@
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-geospatial" version="${datanucleus-geospatial.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-java8" version="${datanucleus-java8.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
@@ -125,6 +127,8 @@
         	group="${datanucleus.group}" artifact="datanucleus-xml" version="${datanucleus-xml.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-java8" version="${datanucleus-java8.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
@@ -203,6 +207,8 @@
         	group="${datanucleus.group}" artifact="datanucleus-excel" version="${datanucleus-excel.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-java8" version="${datanucleus-java8.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
@@ -284,6 +290,8 @@
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-java8" version="${datanucleus-java8.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
@@ -363,6 +371,8 @@
         	group="${datanucleus.group}" artifact="datanucleus-odf" version="${datanucleus-odf.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-java8" version="${datanucleus-java8.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
@@ -444,6 +454,8 @@
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-java8" version="${datanucleus-java8.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
@@ -515,6 +527,8 @@
         	group="${datanucleus.group}" artifact="datanucleus-hbase" version="${datanucleus-hbase.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-java8" version="${datanucleus-java8.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
@@ -596,6 +610,8 @@
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-java8" version="${datanucleus-java8.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
@@ -672,6 +688,8 @@
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-java8" version="${datanucleus-java8.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
@@ -747,6 +765,8 @@
         	group="${datanucleus.group}" artifact="datanucleus-neo4j" version="${datanucleus-neo4j.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-java8" version="${datanucleus-java8.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
@@ -827,6 +847,8 @@
         	group="${datanucleus.group}" artifact="datanucleus-neodatis" version="${datanucleus-neodatis.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-java8" version="${datanucleus-java8.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
@@ -925,6 +947,8 @@
         	group="${datanucleus.group}" artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-geospatial" version="${datanucleus-geospatial.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-java8" version="${datanucleus-java8.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
@@ -1073,6 +1097,8 @@
         	group="${datanucleus.group}" artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-geospatial" version="${datanucleus-geospatial.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-java8" version="${datanucleus-java8.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"

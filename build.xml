@@ -803,11 +803,7 @@
         <copy file="${basedir}/licenses/google.guava.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
-            group="${neo4j.kernel.group}" artifact="${neo4j.kernel.artifact}" version="${neo4j.kernel.version}"/>
-        <copy file="${basedir}/licenses/neo4j.license.txt" todir="${dist.dir}/deps"/>
-
-        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
-            group="${neo4j.cypher.group}" artifact="${neo4j.cypher.artifact}" version="${neo4j.cypher.version}"/>
+            group="${neo4j.group}" artifact="${neo4j.artifact}" version="${neo4j.version}"/>
         <copy file="${basedir}/licenses/neo4j.license.txt" todir="${dist.dir}/deps"/>
 
         <!-- Include the tools -->

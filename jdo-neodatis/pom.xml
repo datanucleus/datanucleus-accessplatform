@@ -29,7 +29,7 @@
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-api-jdo</artifactId>
-            <version>4.0.4</version>
+            <version>4.0.5</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
@@ -39,7 +39,7 @@
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-neodatis</artifactId>
-            <version>4.0.4</version>
+            <version>4.0.5</version>
         </dependency>
     </dependencies>
 </project>

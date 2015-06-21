@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.datanucleus</groupId>
         <artifactId>datanucleus-accessplatform-parent</artifactId>
-        <version>4.1.2-SNAPSHOT</version>
+        <version>4.2.0-m1-SNAPSHOT</version>
     </parent>
 
     <packaging>pom</packaging>
@@ -17,9 +17,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>javax.jdo</groupId>
-            <artifactId>jdo-api</artifactId>
-            <version>3.1</version>
+            <groupId>org.datanucleus</groupId>
+            <artifactId>javax.jdo</artifactId>
+            <version>3.2.0-m1</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
@@ -29,12 +29,12 @@
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-api-jdo</artifactId>
-            <version>4.1.0-release</version>
+            <version>4.2.0-m1</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-jdo-query</artifactId>
-            <version>4.0.4</version>
+            <version>4.2.0-m1</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>

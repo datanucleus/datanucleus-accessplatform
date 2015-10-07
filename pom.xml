@@ -10,7 +10,7 @@
 
     <groupId>org.datanucleus</groupId>
     <artifactId>datanucleus-accessplatform-parent</artifactId>
-    <version>4.2.0-release</version>
+    <version>4.2.1-SNAPSHOT</version>
 
     <packaging>pom</packaging>
     <name>DataNucleus AccessPlatform Libraries Parent</name>

@@ -103,4 +103,14 @@
             </build>
         </profile>
     </profiles>
+
+    <distributionManagement>
+        <!-- For nightly build process -->
+        <snapshotRepository>
+            <id>datanucleus-nightly</id>
+            <name>DataNucleus Nightly</name>
+            <url>file:${user.home}/htdocs/downloads/maven2-nightly/</url>
+            <uniqueVersion>false</uniqueVersion>
+        </snapshotRepository>
+    </distributionManagement>
 </project>

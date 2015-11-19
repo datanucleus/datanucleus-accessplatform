@@ -39,7 +39,7 @@
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-mongodb</artifactId>
-            <version>4.1.0-release</version>
+            <version>4.1.1</version>
         </dependency>
     </dependencies>
 </project>

@@ -24,7 +24,7 @@
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-core</artifactId>
-            <version>4.1.7-SNAPSHOT</version>
+            <version>4.1.7</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
@@ -34,7 +34,7 @@
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-jdo-query</artifactId>
-            <version>4.0.4</version>
+            <version>4.0.5</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>

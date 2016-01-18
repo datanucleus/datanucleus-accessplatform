@@ -925,6 +925,8 @@
         	group="${datanucleus.group}" artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-scala" version="${datanucleus-scala.version}"/>
 
         <!-- Include all dependencies. -->
         <mkdir dir="${dist.dir}/deps"/>
@@ -1073,6 +1075,8 @@
         	group="${datanucleus.group}" artifact="datanucleus-jodatime" version="${datanucleus-jodatime.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-guava" version="${datanucleus-guava.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-scala" version="${datanucleus-scala.version}"/>
 
         <!-- Include the tools -->
         <mkdir dir="${dist.dir}/tools"/>

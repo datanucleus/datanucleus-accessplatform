@@ -19,7 +19,7 @@
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>javax.jdo</artifactId>
-            <version>3.2.0-m3</version>
+            <version>3.2.0-m4</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
@@ -29,12 +29,12 @@
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-api-jdo</artifactId>
-            <version>5.0.0-m1</version>
+            <version>5.0.0-m2-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-jdo-query</artifactId>
-            <version>5.0.0-m1</version>
+            <version>5.0.0-m2-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>

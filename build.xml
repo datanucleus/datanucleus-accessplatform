@@ -554,10 +554,6 @@
             group="${hbase.group}" artifact="${hbase.artifact}" version="${hbase.version}"/>
         <copy file="${basedir}/licenses/hbase.license.txt" todir="${dist.dir}/deps"/>
 
-        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
-            group="${hadoop.core.group}" artifact="${hadoop.core.artifact}" version="${hadoop.core.version}"/>
-        <copy file="${basedir}/licenses/hadoop.core.license.txt" todir="${dist.dir}/deps"/>
-
         <!-- Include the tools -->
         <mkdir dir="${dist.dir}/tools"/>
         <copy todir="${dist.dir}/tools">
@@ -999,10 +995,6 @@
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
             group="${hbase.group}" artifact="${hbase.artifact}" version="${hbase.version}"/>
         <copy file="${basedir}/licenses/hbase.license.txt" todir="${dist.dir}/deps"/>
-
-        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
-            group="${hadoop.core.group}" artifact="${hadoop.core.artifact}" version="${hadoop.core.version}"/>
-        <copy file="${basedir}/licenses/hadoop.core.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
             group="${mongodb.group}" artifact="${mongodb.artifact}" version="${mongodb.version}"/>

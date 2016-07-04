@@ -25,22 +25,22 @@
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-core</artifactId>
-            <version>5.0.0-m5</version>
+            <version>5.0.0-release</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-api-jpa</artifactId>
-            <version>5.0.0-m5</version>
+            <version>5.0.0-release</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-jpa-query</artifactId>
-            <version>5.0.0-m1</version>
+            <version>5.0.0-release</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-rdbms</artifactId>
-            <version>5.0.0-m5</version>
+            <version>5.0.0-release</version>
         </dependency>
     </dependencies>
 </project>

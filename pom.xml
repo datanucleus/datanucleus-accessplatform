@@ -25,7 +25,7 @@
         <module>jdo-ldap</module>
         <module>jdo-mongodb</module>
         <module>jdo-neo4j</module>
-        <module>jdo-neodatis</module>
+        <!-- module>jdo-neodatis</module-->
         <module>jdo-odf</module>
         <module>jdo-rdbms</module>
         <module>jdo-xml</module>

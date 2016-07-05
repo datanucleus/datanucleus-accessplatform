@@ -18,7 +18,7 @@
         <antcall target="arch_json"/>
         <antcall target="arch_mongodb"/>
         <antcall target="arch_neo4j"/>
-        <antcall target="arch_neodatis"/>
+        <!--antcall target="arch_neodatis"/-->
         <antcall target="arch_odf"/>
         <antcall target="arch_rdbms"/>
         <antcall target="arch_xml"/>
@@ -895,8 +895,8 @@
         	group="${datanucleus.group}" artifact="datanucleus-cassandra" version="${datanucleus-cassandra.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-rdbms" version="${datanucleus-rdbms.version}"/>
-        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
-        	group="${datanucleus.group}" artifact="datanucleus-neodatis" version="${datanucleus-neodatis.version}"/>
+        <!--copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-neodatis" version="${datanucleus-neodatis.version}"/-->
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-excel" version="${datanucleus-excel.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
@@ -972,9 +972,9 @@
             group="${h2.group}" artifact="${h2.artifact}" version="${h2.version}"/>
         <copy file="${basedir}/licenses/h2.license.txt" todir="${dist.dir}/deps"/>
 
-        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
+        <!--copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
             group="${neodatis.group}" artifact="${neodatis.artifact}" version="${neodatis.version}"/>
-        <copy file="${basedir}/licenses/neodatis.license.txt" todir="${dist.dir}/deps"/>
+        <copy file="${basedir}/licenses/neodatis.license.txt" todir="${dist.dir}/deps"/-->
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
             group="${slf4j.group}" artifact="${slf4j.artifact}" version="${slf4j.version}"/>
@@ -1041,8 +1041,8 @@
         	group="${datanucleus.group}" artifact="datanucleus-cassandra" version="${datanucleus-cassandra.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-rdbms" version="${datanucleus-rdbms.version}"/>
-        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
-        	group="${datanucleus.group}" artifact="datanucleus-neodatis" version="${datanucleus-neodatis.version}"/>
+        <!--copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-neodatis" version="${datanucleus-neodatis.version}"/-->
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-excel" version="${datanucleus-excel.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"

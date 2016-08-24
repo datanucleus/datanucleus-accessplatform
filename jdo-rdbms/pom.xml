@@ -24,12 +24,12 @@
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-core</artifactId>
-            <version>4.1.12</version>
+            <version>4.1.13</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-api-jdo</artifactId>
-            <version>4.2.3</version>
+            <version>4.2.4</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
@@ -39,7 +39,7 @@
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-rdbms</artifactId>
-            <version>4.1.14</version>
+            <version>4.1.15</version>
         </dependency>
     </dependencies>
 </project>

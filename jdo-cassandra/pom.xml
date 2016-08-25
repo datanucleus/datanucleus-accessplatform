@@ -19,27 +19,27 @@
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>javax.jdo</artifactId>
-            <version>3.2.0-m5</version>
+            <version>${javax.jdo.version}</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-core</artifactId>
-            <version>5.0.1</version>
+            <version>${core.version}</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-api-jdo</artifactId>
-            <version>5.0.1</version>
+            <version>${api.jdo.version}</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-jdo-query</artifactId>
-            <version>5.0.1</version>
+            <version>${jdo.query.version}</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-cassandra</artifactId>
-            <version>5.0.0-release</version>
+            <version>${cassandra.version}</version>
         </dependency>
     </dependencies>
 </project>

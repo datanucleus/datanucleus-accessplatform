@@ -17,6 +17,35 @@
     <description>DataNucleus AccessPlatform libraries parent POM</description>
     <url>http://www.datanucleus.org</url>
 
+    <properties>
+        <javax.jdo.version>3.2.0-m5</javax.jdo.version>
+        <javax.persistence.version>2.1.2</javax.persistence.version>
+
+        <core.version>5.0.2-SNAPSHOT</core.version>
+        <api.jdo.version>5.0.2-SNAPSHOT</api.jdo.version>
+        <api.jpa.version>5.0.2-SNAPSHOT</api.jpa.version>
+        <api.rest.version>5.0.1</api.rest.version>
+
+        <cassandra.version>5.0.0-release</cassandra.version>
+        <excel.version>5.0.1</excel.version>
+        <hbase.version>5.0.0-release</hbase.version>
+        <json.version>5.0.0-release</json.version>
+        <ldap.version>5.0.0-release</ldap.version>
+        <mongodb.version>5.0.0-release</mongodb.version>
+        <neo4j.version>5.0.1</neo4j.version>
+        <neodatis.version>5.0.0-release</neodatis.version>
+        <odf.version>5.0.0-release</odf.version>
+        <rdbms.version>5.0.2-SNAPSHOT</rdbms.version>
+        <xml.version>5.0.0-release</xml.version>
+
+        <jodatime.version>5.0.0-release</jodatime.version>
+        <geospatial.version>5.0.1</geospatial.version>
+        <guava.version>5.0.0-release</guava.version>
+        <cache.version>5.0.0-release</cache.version>
+        <jdo.query.version>5.0.1</jdo.query.version>
+        <jpa.query.version>5.0.1</jpa.query.version>
+    </properties>
+
     <modules>
         <module>jdo-cassandra</module>
         <module>jdo-excel</module>

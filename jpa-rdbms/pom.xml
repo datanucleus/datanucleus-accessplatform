@@ -19,28 +19,27 @@
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>javax.persistence</artifactId>
-            <version>2.1.2</version>
-            <scope>provided</scope>
+            <version>${javax.persistence.version}</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-core</artifactId>
-            <version>5.0.1</version>
+            <version>${core.version}</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-api-jpa</artifactId>
-            <version>5.0.1</version>
+            <version>${api.jpa.version}</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-jpa-query</artifactId>
-            <version>5.0.1</version>
+            <version>${jpa.query.version}</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-rdbms</artifactId>
-            <version>5.0.1</version>
+            <version>${rdbms.version}</version>
         </dependency>
     </dependencies>
 </project>

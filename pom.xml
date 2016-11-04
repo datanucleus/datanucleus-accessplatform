@@ -39,7 +39,7 @@
         <xml.version>5.0.0-release</xml.version>
 
         <jodatime.version>5.0.0-release</jodatime.version>
-        <geospatial.version>5.0.1</geospatial.version>
+        <geospatial.version>5.0.2-SNAPSHOT</geospatial.version>
         <guava.version>5.0.1-SNAPSHOT</guava.version>
         <cache.version>5.0.0-release</cache.version>
         <jdo.query.version>5.0.1</jdo.query.version>

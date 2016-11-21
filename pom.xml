@@ -21,9 +21,9 @@
         <javax.jdo.version>3.2.0-m6</javax.jdo.version>
         <javax.persistence.version>2.1.3</javax.persistence.version>
 
-        <core.version>5.0.5-SNAPSHOT</core.version>
-        <api.jdo.version>5.0.5-SNAPSHOT</api.jdo.version>
-        <api.jpa.version>5.0.5-SNAPSHOT</api.jpa.version>
+        <core.version>5.0.5</core.version>
+        <api.jdo.version>5.0.5</api.jdo.version>
+        <api.jpa.version>5.0.5</api.jpa.version>
         <api.rest.version>5.0.2</api.rest.version>
 
         <cassandra.version>5.0.2</cassandra.version>
@@ -35,12 +35,12 @@
         <neo4j.version>5.0.3</neo4j.version>
         <neodatis.version>5.0.0-release</neodatis.version>
         <odf.version>5.0.2</odf.version>
-        <rdbms.version>5.0.5-SNAPSHOT</rdbms.version>
+        <rdbms.version>5.0.5</rdbms.version>
         <xml.version>5.0.0-release</xml.version>
 
         <jodatime.version>5.0.0-release</jodatime.version>
-        <geospatial.version>5.0.2-SNAPSHOT</geospatial.version>
-        <guava.version>5.0.1-SNAPSHOT</guava.version>
+        <geospatial.version>5.0.2</geospatial.version>
+        <guava.version>5.0.1</guava.version>
         <cache.version>5.0.0-release</cache.version>
         <jdo.query.version>5.0.1</jdo.query.version>
         <jpa.query.version>5.0.1</jpa.query.version>

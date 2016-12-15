@@ -21,9 +21,9 @@
         <javax.jdo.version>3.2.0-m6</javax.jdo.version>
         <javax.persistence.version>2.1.3</javax.persistence.version>
 
-        <core.version>5.0.6-SNAPSHOT</core.version>
-        <api.jdo.version>5.0.6-SNAPSHOT</api.jdo.version>
-        <api.jpa.version>5.0.6-SNAPSHOT</api.jpa.version>
+        <core.version>5.0.6</core.version>
+        <api.jdo.version>5.0.6</api.jdo.version>
+        <api.jpa.version>5.0.6</api.jpa.version>
         <api.rest.version>5.0.2</api.rest.version>
 
         <cassandra.version>5.0.2</cassandra.version>
@@ -31,11 +31,11 @@
         <hbase.version>5.0.2</hbase.version>
         <json.version>5.0.2</json.version>
         <ldap.version>5.0.1</ldap.version>
-        <mongodb.version>5.0.3-SNAPSHOT</mongodb.version>
+        <mongodb.version>5.0.3</mongodb.version>
         <neo4j.version>5.0.3</neo4j.version>
         <neodatis.version>5.0.0-release</neodatis.version>
         <odf.version>5.0.2</odf.version>
-        <rdbms.version>5.0.6-SNAPSHOT</rdbms.version>
+        <rdbms.version>5.0.6</rdbms.version>
         <xml.version>5.0.0-release</xml.version>
 
         <jodatime.version>5.0.0-release</jodatime.version>

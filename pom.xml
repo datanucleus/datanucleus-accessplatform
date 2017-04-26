@@ -21,26 +21,26 @@
         <javax.jdo.version>3.2.0-m6</javax.jdo.version>
         <javax.persistence.version>2.1.3</javax.persistence.version>
 
-        <core.version>5.1.0-m2-SNAPSHOT</core.version>
-        <api.jdo.version>5.1.0-m2-SNAPSHOT</api.jdo.version>
-        <api.jpa.version>5.1.0-m2-SNAPSHOT</api.jpa.version>
+        <core.version>5.1.0-m2</core.version>
+        <api.jdo.version>5.1.0-m2</api.jdo.version>
+        <api.jpa.version>5.1.0-m2</api.jpa.version>
         <api.rest.version>5.0.2</api.rest.version>
 
-        <cassandra.version>5.1.0-m2-SNAPSHOT</cassandra.version>
-        <excel.version>5.1.0-m2-SNAPSHOT</excel.version>
-        <hbase.version>5.1.0-m2-SNAPSHOT</hbase.version>
-        <json.version>5.1.0-m2-SNAPSHOT</json.version>
+        <cassandra.version>5.1.0-m2</cassandra.version>
+        <excel.version>5.1.0-m2</excel.version>
+        <hbase.version>5.1.0-m2</hbase.version>
+        <json.version>5.1.0-m2</json.version>
         <ldap.version>5.0.1</ldap.version>
-        <mongodb.version>5.1.0-m2-SNAPSHOT</mongodb.version>
-        <neo4j.version>5.1.0-m2-SNAPSHOT</neo4j.version>
-        <odf.version>5.1.0-m2-SNAPSHOT</odf.version>
-        <rdbms.version>5.1.0-m2-SNAPSHOT</rdbms.version>
-        <xml.version>5.1.0-m1-SNAPSHOT</xml.version>
+        <mongodb.version>5.1.0-m2</mongodb.version>
+        <neo4j.version>5.1.0-m2</neo4j.version>
+        <odf.version>5.1.0-m2</odf.version>
+        <rdbms.version>5.1.0-m2</rdbms.version>
+        <xml.version>5.1.0-m1</xml.version>
 
         <jodatime.version>5.0.0-release</jodatime.version>
         <geospatial.version>5.0.2</geospatial.version>
         <guava.version>5.0.1</guava.version>
-        <cache.version>5.1.0-m1-SNAPSHOT</cache.version>
+        <cache.version>5.1.0-m1</cache.version>
         <jdo.query.version>5.0.1</jdo.query.version>
         <jpa.query.version>5.0.1</jpa.query.version>
     </properties>

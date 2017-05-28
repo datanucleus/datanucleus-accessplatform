@@ -26,14 +26,14 @@
         <api.jpa.version>5.1.0-m3-SNAPSHOT</api.jpa.version>
         <api.rest.version>5.0.2</api.rest.version>
 
-        <cassandra.version>5.1.0-m2</cassandra.version>
-        <excel.version>5.1.0-m2</excel.version>
+        <cassandra.version>5.1.0-m3-SNAPSHOT</cassandra.version>
+        <excel.version>5.1.0-m3-SNAPSHOT</excel.version>
         <hbase.version>5.1.0-m3-SNAPSHOT</hbase.version>
-        <json.version>5.1.0-m2</json.version>
+        <json.version>5.1.0-m3-SNAPSHOT</json.version>
         <ldap.version>5.0.1</ldap.version>
-        <mongodb.version>5.1.0-m2</mongodb.version>
-        <neo4j.version>5.1.0-m2</neo4j.version>
-        <odf.version>5.1.0-m2</odf.version>
+        <mongodb.version>5.1.0-m3-SNAPSHOT</mongodb.version>
+        <neo4j.version>5.1.0-m3-SNAPSHOT</neo4j.version>
+        <odf.version>5.1.0-m3-SNAPSHOT</odf.version>
         <rdbms.version>5.1.0-m3-SNAPSHOT</rdbms.version>
         <xml.version>5.1.0-m1</xml.version>
 

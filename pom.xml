@@ -37,7 +37,7 @@
         <rdbms.version>5.1.0-m5-SNAPSHOT</rdbms.version>
         <xml.version>5.1.0-m3-SNAPSHOT</xml.version>
 
-        <jodatime.version>5.0.0-release</jodatime.version>
+        <jodatime.version>5.1.0-m1-SNAPSHOT</jodatime.version>
         <geospatial.version>5.1.0-m1-SNAPSHOT</geospatial.version>
         <guava.version>5.0.1</guava.version>
         <cache.version>5.1.0-m2</cache.version>

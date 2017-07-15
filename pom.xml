@@ -21,26 +21,27 @@
         <javax.jdo.version>3.2.0-m7</javax.jdo.version>
         <javax.persistence.version>2.2.0-release</javax.persistence.version>
 
-        <core.version>5.1.0-m5-SNAPSHOT</core.version>
-        <api.jdo.version>5.1.0-m5-SNAPSHOT</api.jdo.version>
-        <api.jpa.version>5.1.0-m5-SNAPSHOT</api.jpa.version>
-        <api.rest.version>5.1.0-m1</api.rest.version>
+        <core.version>5.1.0-release</core.version>
+        <api.jdo.version>5.1.0-release</api.jdo.version>
+        <api.jpa.version>5.1.0-release</api.jpa.version>
+        <api.rest.version>5.1.0-release</api.rest.version>
 
-        <cassandra.version>5.1.0-m5-SNAPSHOT</cassandra.version>
-        <excel.version>5.1.0-m5-SNAPSHOT</excel.version>
-        <hbase.version>5.1.0-m5-SNAPSHOT</hbase.version>
-        <json.version>5.1.0-m5-SNAPSHOT</json.version>
-        <ldap.version>5.1.0-m2-SNAPSHOT</ldap.version>
-        <mongodb.version>5.1.0-m5-SNAPSHOT</mongodb.version>
-        <neo4j.version>5.1.0-m5-SNAPSHOT</neo4j.version>
-        <odf.version>5.1.0-m5-SNAPSHOT</odf.version>
-        <rdbms.version>5.1.0-m5-SNAPSHOT</rdbms.version>
-        <xml.version>5.1.0-m3-SNAPSHOT</xml.version>
+        <cassandra.version>5.1.0-release</cassandra.version>
+        <excel.version>5.1.0-release</excel.version>
+        <hbase.version>5.1.0-release</hbase.version>
+        <json.version>5.1.0-release</json.version>
+        <ldap.version>5.1.0-release</ldap.version>
+        <mongodb.version>5.1.0-release</mongodb.version>
+        <neo4j.version>5.1.0-release</neo4j.version>
+        <odf.version>5.1.0-release</odf.version>
+        <rdbms.version>5.1.0-release</rdbms.version>
+        <xml.version>5.1.0-release</xml.version>
 
-        <jodatime.version>5.1.0-m1-SNAPSHOT</jodatime.version>
-        <geospatial.version>5.1.0-m1-SNAPSHOT</geospatial.version>
+        <jodatime.version>5.1.0-release</jodatime.version>
+        <geospatial.version>5.1.0-release</geospatial.version>
+        <cache.version>5.1.0-release</cache.version>
+
         <guava.version>5.0.1</guava.version>
-        <cache.version>5.1.0-m2</cache.version>
         <jdo.query.version>5.0.1</jdo.query.version>
         <jpa.query.version>5.0.1</jpa.query.version>
     </properties>

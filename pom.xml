@@ -18,7 +18,7 @@
     <url>http://www.datanucleus.org</url>
 
     <properties>
-        <javax.jdo.version>3.2.0-m7</javax.jdo.version>
+        <javax.jdo.version>3.2.0-m8</javax.jdo.version>
         <javax.persistence.version>2.2.0-release</javax.persistence.version>
 
         <core.version>5.1.6-SNAPSHOT</core.version>
@@ -32,7 +32,7 @@
         <json.version>5.1.0-release</json.version>
         <ldap.version>5.1.0-release</ldap.version>
         <mongodb.version>5.1.0-release</mongodb.version>
-        <neo4j.version>5.1.1</neo4j.version>
+        <neo4j.version>5.1.2-SNAPSHOT</neo4j.version>
         <odf.version>5.1.0-release</odf.version>
         <rdbms.version>5.1.6-SNAPSHOT</rdbms.version>
         <xml.version>5.1.0-release</xml.version>

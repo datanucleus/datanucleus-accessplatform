@@ -21,8 +21,8 @@
         <javax.jdo.version>3.2.0-m8</javax.jdo.version>
         <javax.persistence.version>2.2.0-release</javax.persistence.version>
 
-        <core.version>5.1.7</core.version>
-        <api.jdo.version>5.1.4</api.jdo.version>
+        <core.version>5.1.8-SNAPSHOT</core.version>
+        <api.jdo.version>5.1.5-SNAPSHOT</api.jdo.version>
         <api.jpa.version>5.1.5</api.jpa.version>
         <api.rest.version>5.1.0-release</api.rest.version>
 
@@ -34,12 +34,12 @@
         <mongodb.version>5.1.0-release</mongodb.version>
         <neo4j.version>5.1.3</neo4j.version>
         <odf.version>5.1.0-release</odf.version>
-        <rdbms.version>5.1.7</rdbms.version>
+        <rdbms.version>5.1.8-SNAPSHOT</rdbms.version>
         <xml.version>5.1.0-release</xml.version>
 
         <jodatime.version>5.1.0-release</jodatime.version>
         <geospatial.version>5.1.1</geospatial.version>
-        <cache.version>5.1.0-release</cache.version>
+        <cache.version>5.1.1-SNAPSHOT</cache.version>
 
         <guava.version>5.0.1</guava.version>
         <jdo.query.version>5.0.4</jdo.query.version>

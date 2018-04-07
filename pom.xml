@@ -22,7 +22,7 @@
         <javax.persistence.version>2.2.0-release</javax.persistence.version>
 
         <core.version>5.1.9-SNAPSHOT</core.version>
-        <api.jdo.version>5.1.5</api.jdo.version>
+        <api.jdo.version>5.1.6-SNAPSHOT</api.jdo.version>
         <api.jpa.version>5.1.5</api.jpa.version>
         <api.rest.version>5.1.0-release</api.rest.version>
 

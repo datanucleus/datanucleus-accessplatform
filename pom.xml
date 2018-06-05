@@ -19,11 +19,11 @@
 
     <properties>
         <javax.jdo.version>3.2.0-m8</javax.jdo.version>
-        <javax.persistence.version>2.2.0-release</javax.persistence.version>
+        <javax.persistence.version>2.2.1-SNAPSHOT</javax.persistence.version>
 
         <core.version>5.2.0-m1-SNAPSHOT</core.version>
         <api.jdo.version>5.1.7</api.jdo.version>
-        <api.jpa.version>5.1.7</api.jpa.version>
+        <api.jpa.version>5.2.0-m1-SNAPSHOT</api.jpa.version>
         <api.rest.version>5.1.0-release</api.rest.version>
 
         <cassandra.version>5.1.0-release</cassandra.version>

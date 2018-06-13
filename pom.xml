@@ -42,8 +42,8 @@
         <cache.version>5.1.1</cache.version>
 
         <guava.version>5.0.1</guava.version>
-        <jdo.query.version>5.0.4</jdo.query.version>
-        <jpa.query.version>5.0.4</jpa.query.version>
+        <jdo.query.version>5.0.5</jdo.query.version>
+        <jpa.query.version>5.0.5</jpa.query.version>
     </properties>
 
     <modules>

@@ -34,7 +34,7 @@
         <mongodb.version>5.1.2</mongodb.version>
         <neo4j.version>5.1.3</neo4j.version>
         <odf.version>5.1.0-release</odf.version>
-        <rdbms.version>5.1.11-SNAPSHOT</rdbms.version>
+        <rdbms.version>5.1.11</rdbms.version>
         <xml.version>5.1.0-release</xml.version>
 
         <jodatime.version>5.1.0-release</jodatime.version>

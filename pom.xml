@@ -19,7 +19,7 @@
 
     <properties>
         <javax.jdo.version>3.2.0-m8</javax.jdo.version>
-        <javax.persistence.version>2.2.1-SNAPSHOT</javax.persistence.version>
+        <javax.persistence.version>2.2.1</javax.persistence.version>
 
         <core.version>5.2.0-m1-SNAPSHOT</core.version>
         <api.jdo.version>5.2.0-m1-SNAPSHOT</api.jdo.version>

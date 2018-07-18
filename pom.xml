@@ -24,7 +24,7 @@
         <core.version>5.2.0-m1-SNAPSHOT</core.version>
         <api.jdo.version>5.2.0-m1-SNAPSHOT</api.jdo.version>
         <api.jpa.version>5.2.0-m1-SNAPSHOT</api.jpa.version>
-        <api.rest.version>5.1.0-release</api.rest.version>
+        <api.rest.version>5.2.0-m1-SNAPSHOT</api.rest.version>
 
         <cassandra.version>5.1.0-release</cassandra.version>
         <excel.version>5.1.0-release</excel.version>

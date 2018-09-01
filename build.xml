@@ -57,15 +57,13 @@
         <mkdir dir="${dist.dir}/deps"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
             group="${jdo.group}" artifact="${jdo.artifact}" version="${jdo.version}"/>
-        <copy file="${basedir}/licenses/jdo-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jpa.group}" artifact="${jpa.artifact}" version="${jpa.version}"/>
-        <copy file="${basedir}/licenses/jpa-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
-        	group="${geronimo_jta.group}" artifact="${geronimo_jta.artifact}" version="${geronimo_jta.version}"/>
-        <copy file="${basedir}/licenses/geronimo_jta.license.txt" todir="${dist.dir}/deps"/>
+        	group="${jta.group}" artifact="${jta.artifact}" version="${jta.version}"/>
+        <copy file="${basedir}/licenses/jta.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${ehcache.group}" artifact="${ehcache.artifact}" version="${ehcache.version}"/>
@@ -133,15 +131,13 @@
         <mkdir dir="${dist.dir}/deps"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
             group="${jdo.group}" artifact="${jdo.artifact}" version="${jdo.version}"/>
-        <copy file="${basedir}/licenses/jdo-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jpa.group}" artifact="${jpa.artifact}" version="${jpa.version}"/>
-        <copy file="${basedir}/licenses/jpa-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
-        	group="${geronimo_jta.group}" artifact="${geronimo_jta.artifact}" version="${geronimo_jta.version}"/>
-        <copy file="${basedir}/licenses/geronimo_jta.license.txt" todir="${dist.dir}/deps"/>
+        	group="${jta.group}" artifact="${jta.artifact}" version="${jta.version}"/>
+        <copy file="${basedir}/licenses/jta.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${ehcache.group}" artifact="${ehcache.artifact}" version="${ehcache.version}"/>
@@ -211,15 +207,13 @@
         <mkdir dir="${dist.dir}/deps"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
             group="${jdo.group}" artifact="${jdo.artifact}" version="${jdo.version}"/>
-        <copy file="${basedir}/licenses/jdo-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jpa.group}" artifact="${jpa.artifact}" version="${jpa.version}"/>
-        <copy file="${basedir}/licenses/jpa-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
-        	group="${geronimo_jta.group}" artifact="${geronimo_jta.artifact}" version="${geronimo_jta.version}"/>
-        <copy file="${basedir}/licenses/geronimo_jta.license.txt" todir="${dist.dir}/deps"/>
+        	group="${jta.group}" artifact="${jta.artifact}" version="${jta.version}"/>
+        <copy file="${basedir}/licenses/jta.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${ehcache.group}" artifact="${ehcache.artifact}" version="${ehcache.version}"/>
@@ -291,15 +285,13 @@
         <mkdir dir="${dist.dir}/deps"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
             group="${jdo.group}" artifact="${jdo.artifact}" version="${jdo.version}"/>
-        <copy file="${basedir}/licenses/jdo-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jpa.group}" artifact="${jpa.artifact}" version="${jpa.version}"/>
-        <copy file="${basedir}/licenses/jpa-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
-        	group="${geronimo_jta.group}" artifact="${geronimo_jta.artifact}" version="${geronimo_jta.version}"/>
-        <copy file="${basedir}/licenses/geronimo_jta.license.txt" todir="${dist.dir}/deps"/>
+        	group="${jta.group}" artifact="${jta.artifact}" version="${jta.version}"/>
+        <copy file="${basedir}/licenses/jta.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${ehcache.group}" artifact="${ehcache.artifact}" version="${ehcache.version}"/>
@@ -371,15 +363,13 @@
         <mkdir dir="${dist.dir}/deps"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
             group="${jdo.group}" artifact="${jdo.artifact}" version="${jdo.version}"/>
-        <copy file="${basedir}/licenses/jdo-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jpa.group}" artifact="${jpa.artifact}" version="${jpa.version}"/>
-        <copy file="${basedir}/licenses/jpa-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
-        	group="${geronimo_jta.group}" artifact="${geronimo_jta.artifact}" version="${geronimo_jta.version}"/>
-        <copy file="${basedir}/licenses/geronimo_jta.license.txt" todir="${dist.dir}/deps"/>
+        	group="${jta.group}" artifact="${jta.artifact}" version="${jta.version}"/>
+        <copy file="${basedir}/licenses/jta.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${ehcache.group}" artifact="${ehcache.artifact}" version="${ehcache.version}"/>
@@ -451,15 +441,13 @@
         <mkdir dir="${dist.dir}/deps"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
             group="${jdo.group}" artifact="${jdo.artifact}" version="${jdo.version}"/>
-        <copy file="${basedir}/licenses/jdo-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jpa.group}" artifact="${jpa.artifact}" version="${jpa.version}"/>
-        <copy file="${basedir}/licenses/jpa-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
-        	group="${geronimo_jta.group}" artifact="${geronimo_jta.artifact}" version="${geronimo_jta.version}"/>
-        <copy file="${basedir}/licenses/geronimo_jta.license.txt" todir="${dist.dir}/deps"/>
+        	group="${jta.group}" artifact="${jta.artifact}" version="${jta.version}"/>
+        <copy file="${basedir}/licenses/jta.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${ehcache.group}" artifact="${ehcache.artifact}" version="${ehcache.version}"/>
@@ -523,15 +511,13 @@
         <mkdir dir="${dist.dir}/deps"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
             group="${jdo.group}" artifact="${jdo.artifact}" version="${jdo.version}"/>
-        <copy file="${basedir}/licenses/jdo-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jpa.group}" artifact="${jpa.artifact}" version="${jpa.version}"/>
-        <copy file="${basedir}/licenses/jpa-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
-        	group="${geronimo_jta.group}" artifact="${geronimo_jta.artifact}" version="${geronimo_jta.version}"/>
-        <copy file="${basedir}/licenses/geronimo_jta.license.txt" todir="${dist.dir}/deps"/>
+        	group="${jta.group}" artifact="${jta.artifact}" version="${jta.version}"/>
+        <copy file="${basedir}/licenses/jta.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${ehcache.group}" artifact="${ehcache.artifact}" version="${ehcache.version}"/>
@@ -599,15 +585,13 @@
         <mkdir dir="${dist.dir}/deps"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
             group="${jdo.group}" artifact="${jdo.artifact}" version="${jdo.version}"/>
-        <copy file="${basedir}/licenses/jdo-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jpa.group}" artifact="${jpa.artifact}" version="${jpa.version}"/>
-        <copy file="${basedir}/licenses/jpa-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
-        	group="${geronimo_jta.group}" artifact="${geronimo_jta.artifact}" version="${geronimo_jta.version}"/>
-        <copy file="${basedir}/licenses/geronimo_jta.license.txt" todir="${dist.dir}/deps"/>
+        	group="${jta.group}" artifact="${jta.artifact}" version="${jta.version}"/>
+        <copy file="${basedir}/licenses/jta.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${ehcache.group}" artifact="${ehcache.artifact}" version="${ehcache.version}"/>
@@ -675,15 +659,13 @@
         <mkdir dir="${dist.dir}/deps"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
             group="${jdo.group}" artifact="${jdo.artifact}" version="${jdo.version}"/>
-        <copy file="${basedir}/licenses/jdo-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jpa.group}" artifact="${jpa.artifact}" version="${jpa.version}"/>
-        <copy file="${basedir}/licenses/jpa-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
-        	group="${geronimo_jta.group}" artifact="${geronimo_jta.artifact}" version="${geronimo_jta.version}"/>
-        <copy file="${basedir}/licenses/geronimo_jta.license.txt" todir="${dist.dir}/deps"/>
+        	group="${jta.group}" artifact="${jta.artifact}" version="${jta.version}"/>
+        <copy file="${basedir}/licenses/jta.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${ehcache.group}" artifact="${ehcache.artifact}" version="${ehcache.version}"/>
@@ -751,15 +733,13 @@
         <mkdir dir="${dist.dir}/deps"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
             group="${jdo.group}" artifact="${jdo.artifact}" version="${jdo.version}"/>
-        <copy file="${basedir}/licenses/jdo-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jpa.group}" artifact="${jpa.artifact}" version="${jpa.version}"/>
-        <copy file="${basedir}/licenses/jpa-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
-        	group="${geronimo_jta.group}" artifact="${geronimo_jta.artifact}" version="${geronimo_jta.version}"/>
-        <copy file="${basedir}/licenses/geronimo_jta.license.txt" todir="${dist.dir}/deps"/>
+        	group="${jta.group}" artifact="${jta.artifact}" version="${jta.version}"/>
+        <copy file="${basedir}/licenses/jta.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${ehcache.group}" artifact="${ehcache.artifact}" version="${ehcache.version}"/>
@@ -849,15 +829,13 @@
         <mkdir dir="${dist.dir}/deps"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
             group="${jdo.group}" artifact="${jdo.artifact}" version="${jdo.version}"/>
-        <copy file="${basedir}/licenses/jdo-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jpa.group}" artifact="${jpa.artifact}" version="${jpa.version}"/>
-        <copy file="${basedir}/licenses/jpa-api.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
-        	group="${geronimo_jta.group}" artifact="${geronimo_jta.artifact}" version="${geronimo_jta.version}"/>
-        <copy file="${basedir}/licenses/geronimo_jta.license.txt" todir="${dist.dir}/deps"/>
+        	group="${jta.group}" artifact="${jta.artifact}" version="${jta.version}"/>
+        <copy file="${basedir}/licenses/jta.license.txt" todir="${dist.dir}/deps"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${ehcache.group}" artifact="${ehcache.artifact}" version="${ehcache.version}"/>

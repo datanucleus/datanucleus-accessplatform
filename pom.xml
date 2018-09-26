@@ -27,7 +27,7 @@
         <api.rest.version>5.2.0-m1</api.rest.version>
 
         <cassandra.version>5.1.0-release</cassandra.version>
-        <excel.version>5.1.0-release</excel.version>
+        <excel.version>5.2.0-m1-SNAPSHOT</excel.version>
         <hbase.version>5.1.0-release</hbase.version>
         <json.version>5.1.0-release</json.version>
         <ldap.version>5.1.0-release</ldap.version>

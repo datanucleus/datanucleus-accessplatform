@@ -18,7 +18,7 @@
     <url>http://www.datanucleus.org</url>
 
     <properties>
-        <javax.jdo.version>3.2.0-m10-SNAPSHOT</javax.jdo.version>
+        <javax.jdo.version>3.2.0-m10</javax.jdo.version>
         <javax.persistence.version>2.2.2</javax.persistence.version>
 
         <core.version>5.2.0-m2-SNAPSHOT</core.version>

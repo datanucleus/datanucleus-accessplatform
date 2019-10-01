@@ -21,12 +21,12 @@
         <javax.jdo.version>3.2.0-m12</javax.jdo.version>
         <javax.persistence.version>2.2.2</javax.persistence.version>
 
-        <core.version>5.2.1</core.version>
-        <api.jdo.version>5.2.1</api.jdo.version>
-        <api.jpa.version>5.2.0-release</api.jpa.version>
+        <core.version>5.2.2</core.version>
+        <api.jdo.version>5.2.2</api.jdo.version>
+        <api.jpa.version>5.2.1</api.jpa.version>
         <api.rest.version>5.2.0-release</api.rest.version>
 
-        <cassandra.version>5.1.0-release</cassandra.version>
+        <cassandra.version>5.1.1</cassandra.version>
         <excel.version>5.2.0-release</excel.version>
         <hbase.version>5.1.0-release</hbase.version>
         <json.version>5.1.0-release</json.version>

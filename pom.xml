@@ -23,7 +23,7 @@
 
         <core.version>5.2.3</core.version>
         <api.jdo.version>5.2.4</api.jdo.version>
-        <api.jpa.version>5.2.2</api.jpa.version>
+        <api.jpa.version>5.2.4</api.jpa.version>
         <api.rest.version>5.2.0-release</api.rest.version>
 
         <cassandra.version>5.1.1</cassandra.version>

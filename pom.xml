@@ -34,8 +34,8 @@
         <mongodb.version>5.2.0-release</mongodb.version>
         <neo4j.version>5.1.3</neo4j.version>
         <odf.version>5.2.1</odf.version>
-        <rdbms.version>5.2.4</rdbms.version>
-        <xml.version>5.1.1-SNAPSHOT</xml.version>
+        <rdbms.version>5.2.5-SNAPSHOT</rdbms.version>
+        <xml.version>5.1.1</xml.version>
 
         <jodatime.version>5.2.0-release</jodatime.version>
         <geospatial.version>5.2.0-release</geospatial.version>

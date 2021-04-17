@@ -19,11 +19,11 @@
 
     <properties>
         <javax.jdo.version>3.2.0-m13</javax.jdo.version>
-        <javax.persistence.version>2.2.2</javax.persistence.version>
+        <javax.persistence.version>2.2.3</javax.persistence.version>
 
-        <core.version>5.2.6</core.version>
-        <api.jdo.version>5.2.5</api.jdo.version>
-        <api.jpa.version>5.2.5</api.jpa.version>
+        <core.version>5.2.7</core.version>
+        <api.jdo.version>5.2.6</api.jdo.version>
+        <api.jpa.version>5.2.6</api.jpa.version>
         <api.rest.version>5.2.0-release</api.rest.version>
 
         <cassandra.version>5.2.1</cassandra.version>
@@ -34,7 +34,7 @@
         <mongodb.version>5.2.1</mongodb.version>
         <neo4j.version>5.2.1</neo4j.version>
         <odf.version>5.2.1</odf.version>
-        <rdbms.version>5.2.6</rdbms.version>
+        <rdbms.version>5.2.7</rdbms.version>
         <xml.version>5.1.1</xml.version>
 
         <jodatime.version>5.2.0-release</jodatime.version>

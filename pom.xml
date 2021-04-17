@@ -28,7 +28,7 @@
 
         <cassandra.version>5.2.1</cassandra.version>
         <excel.version>5.2.1</excel.version>
-        <hbase.version>5.2.1</hbase.version>
+        <hbase.version>5.2.2</hbase.version>
         <json.version>5.2.1</json.version>
         <ldap.version>5.1.0-release</ldap.version>
         <mongodb.version>5.2.1</mongodb.version>

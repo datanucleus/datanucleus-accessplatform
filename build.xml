@@ -37,12 +37,17 @@
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
-        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        	group="${datanucleus.group}" artifact="datanucleus-api-jakarta" version="${datanucleus-api-jakarta.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jakarta-query" version="${datanucleus-jakarta-query.version}"/>
+
+    	<copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-rdbms" version="${datanucleus-rdbms.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
@@ -60,6 +65,9 @@
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jpa.group}" artifact="${jpa.artifact}" version="${jpa.version}"/>
+
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
+        	group="${jakarta.group}" artifact="${jakarta.artifact}" version="${jakarta.version}"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jta.group}" artifact="${jta.artifact}" version="${jta.version}"/>
@@ -110,15 +118,21 @@
         <mkdir dir="${dist.dir}/lib"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-core" version="${datanucleus-core.version}"/>
-        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+
+    	<copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
-        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        	group="${datanucleus.group}" artifact="datanucleus-api-jakarta" version="${datanucleus-api-jakarta.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jakarta-query" version="${datanucleus-jakarta-query.version}"/>
+
+    	<copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-xml" version="${datanucleus-xml.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
@@ -134,6 +148,9 @@
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jpa.group}" artifact="${jpa.artifact}" version="${jpa.version}"/>
+
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
+        	group="${jakarta.group}" artifact="${jakarta.artifact}" version="${jakarta.version}"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jta.group}" artifact="${jta.artifact}" version="${jta.version}"/>
@@ -186,15 +203,21 @@
         <mkdir dir="${dist.dir}/lib"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-core" version="${datanucleus-core.version}"/>
-        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+
+    	<copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
-        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        	group="${datanucleus.group}" artifact="datanucleus-api-jakarta" version="${datanucleus-api-jakarta.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jakarta-query" version="${datanucleus-jakarta-query.version}"/>
+
+    	<copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-excel" version="${datanucleus-excel.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
@@ -210,6 +233,9 @@
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jpa.group}" artifact="${jpa.artifact}" version="${jpa.version}"/>
+
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
+        	group="${jakarta.group}" artifact="${jakarta.artifact}" version="${jakarta.version}"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jta.group}" artifact="${jta.artifact}" version="${jta.version}"/>
@@ -264,15 +290,21 @@
         <mkdir dir="${dist.dir}/lib"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-core" version="${datanucleus-core.version}"/>
-        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+
+    	<copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
-        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        	group="${datanucleus.group}" artifact="datanucleus-api-jakarta" version="${datanucleus-api-jakarta.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jakarta-query" version="${datanucleus-jakarta-query.version}"/>
+
+    	<copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-ldap" version="${datanucleus-ldap.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
@@ -288,6 +320,9 @@
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jpa.group}" artifact="${jpa.artifact}" version="${jpa.version}"/>
+
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
+        	group="${jakarta.group}" artifact="${jakarta.artifact}" version="${jakarta.version}"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jta.group}" artifact="${jta.artifact}" version="${jta.version}"/>
@@ -342,15 +377,21 @@
         <mkdir dir="${dist.dir}/lib"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-core" version="${datanucleus-core.version}"/>
-        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+
+    	<copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
-        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        	group="${datanucleus.group}" artifact="datanucleus-api-jakarta" version="${datanucleus-api-jakarta.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jakarta-query" version="${datanucleus-jakarta-query.version}"/>
+
+    	<copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-odf" version="${datanucleus-odf.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
@@ -366,6 +407,9 @@
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jpa.group}" artifact="${jpa.artifact}" version="${jpa.version}"/>
+
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
+        	group="${jakarta.group}" artifact="${jakarta.artifact}" version="${jakarta.version}"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jta.group}" artifact="${jta.artifact}" version="${jta.version}"/>
@@ -420,15 +464,21 @@
         <mkdir dir="${dist.dir}/lib"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-core" version="${datanucleus-core.version}"/>
-        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+
+    	<copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
-        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        	group="${datanucleus.group}" artifact="datanucleus-api-jakarta" version="${datanucleus-api-jakarta.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jakarta-query" version="${datanucleus-jakarta-query.version}"/>
+
+    	<copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-json" version="${datanucleus-json.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
@@ -444,6 +494,9 @@
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jpa.group}" artifact="${jpa.artifact}" version="${jpa.version}"/>
+
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
+        	group="${jakarta.group}" artifact="${jakarta.artifact}" version="${jakarta.version}"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jta.group}" artifact="${jta.artifact}" version="${jta.version}"/>
@@ -490,15 +543,21 @@
         <mkdir dir="${dist.dir}/lib"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-core" version="${datanucleus-core.version}"/>
-        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+
+    	<copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
-        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        	group="${datanucleus.group}" artifact="datanucleus-api-jakarta" version="${datanucleus-api-jakarta.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jakarta-query" version="${datanucleus-jakarta-query.version}"/>
+
+    	<copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-hbase" version="${datanucleus-hbase.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
@@ -514,6 +573,9 @@
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jpa.group}" artifact="${jpa.artifact}" version="${jpa.version}"/>
+
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
+        	group="${jakarta.group}" artifact="${jakarta.artifact}" version="${jakarta.version}"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jta.group}" artifact="${jta.artifact}" version="${jta.version}"/>
@@ -564,15 +626,21 @@
         <mkdir dir="${dist.dir}/lib"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-core" version="${datanucleus-core.version}"/>
-        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+
+    	<copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
-        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        	group="${datanucleus.group}" artifact="datanucleus-api-jakarta" version="${datanucleus-api-jakarta.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jakarta-query" version="${datanucleus-jakarta-query.version}"/>
+
+    	<copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-mongodb" version="${datanucleus-mongodb.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
@@ -588,6 +656,9 @@
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jpa.group}" artifact="${jpa.artifact}" version="${jpa.version}"/>
+
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
+        	group="${jakarta.group}" artifact="${jakarta.artifact}" version="${jakarta.version}"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jta.group}" artifact="${jta.artifact}" version="${jta.version}"/>
@@ -638,15 +709,21 @@
         <mkdir dir="${dist.dir}/lib"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-core" version="${datanucleus-core.version}"/>
-        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+
+    	<copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
-        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        	group="${datanucleus.group}" artifact="datanucleus-api-jakarta" version="${datanucleus-api-jakarta.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jakarta-query" version="${datanucleus-jakarta-query.version}"/>
+
+    	<copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-cassandra" version="${datanucleus-cassandra.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
@@ -662,6 +739,9 @@
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jpa.group}" artifact="${jpa.artifact}" version="${jpa.version}"/>
+
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
+        	group="${jakarta.group}" artifact="${jakarta.artifact}" version="${jakarta.version}"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jta.group}" artifact="${jta.artifact}" version="${jta.version}"/>
@@ -712,15 +792,21 @@
         <mkdir dir="${dist.dir}/lib"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-core" version="${datanucleus-core.version}"/>
-        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+
+    	<copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
-        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        	group="${datanucleus.group}" artifact="datanucleus-api-jakarta" version="${datanucleus-api-jakarta.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jakarta-query" version="${datanucleus-jakarta-query.version}"/>
+
+    	<copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-neo4j" version="${datanucleus-neo4j.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-cache" version="${datanucleus-cache.version}"/>
@@ -736,6 +822,9 @@
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jpa.group}" artifact="${jpa.artifact}" version="${jpa.version}"/>
+
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
+        	group="${jakarta.group}" artifact="${jakarta.artifact}" version="${jakarta.version}"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jta.group}" artifact="${jta.artifact}" version="${jta.version}"/>
@@ -786,15 +875,21 @@
         <mkdir dir="${dist.dir}/lib"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-core" version="${datanucleus-core.version}"/>
-        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+
+    	<copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
-        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        	group="${datanucleus.group}" artifact="datanucleus-api-jakarta" version="${datanucleus-api-jakarta.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jakarta-query" version="${datanucleus-jakarta-query.version}"/>
+
+    	<copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-cassandra" version="${datanucleus-cassandra.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-rdbms" version="${datanucleus-rdbms.version}"/>
@@ -832,6 +927,9 @@
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jpa.group}" artifact="${jpa.artifact}" version="${jpa.version}"/>
+
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
+        	group="${jakarta.group}" artifact="${jakarta.artifact}" version="${jakarta.version}"/>
 
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/deps"
         	group="${jta.group}" artifact="${jta.artifact}" version="${jta.version}"/>
@@ -924,15 +1022,21 @@
         <mkdir dir="${dist.dir}/lib"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-core" version="${datanucleus-core.version}"/>
-        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+
+    	<copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jdo" version="${datanucleus-api-jdo.version}"/>
+        <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-api-jpa" version="${datanucleus-api-jpa.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-jpa-query" version="${datanucleus-jpa-query.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
-        	group="${datanucleus.group}" artifact="datanucleus-jdo-query" version="${datanucleus-jdo-query.version}"/>
+        	group="${datanucleus.group}" artifact="datanucleus-api-jakarta" version="${datanucleus-api-jakarta.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
+        	group="${datanucleus.group}" artifact="datanucleus-jakarta-query" version="${datanucleus-jakarta-query.version}"/>
+
+    	<copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-cassandra" version="${datanucleus-cassandra.version}"/>
         <copy-m2-jar reporoot="${maven_repo}" dest="${dist.dir}/lib"
         	group="${datanucleus.group}" artifact="datanucleus-rdbms" version="${datanucleus-rdbms.version}"/>

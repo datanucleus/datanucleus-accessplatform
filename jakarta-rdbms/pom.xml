@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.datanucleus</groupId>
+        <artifactId>datanucleus-accessplatform-parent</artifactId>
+        <version>6.0.0-m1-SNAPSHOT</version>
+    </parent>
+
+    <packaging>pom</packaging>
+    <groupId>org.datanucleus</groupId>
+    <artifactId>datanucleus-accessplatform-jakarta-rdbms</artifactId>
+
+    <name>DataNucleus Jakarta Persistence RDBMS Library</name>
+    <description>DataNucleus AccessPlatform libraries for Jakarta Persistence use with RDBMS</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.datanucleus</groupId>
+            <artifactId>jakarta.persistence</artifactId>
+            <version>${jakarta.persistence.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.datanucleus</groupId>
+            <artifactId>datanucleus-core</artifactId>
+            <version>${core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.datanucleus</groupId>
+            <artifactId>datanucleus-api-jakarta</artifactId>
+            <version>${api.jakarta.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.datanucleus</groupId>
+            <artifactId>datanucleus-jakarta-query</artifactId>
+            <version>${jakarta.query.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.datanucleus</groupId>
+            <artifactId>datanucleus-rdbms</artifactId>
+            <version>${rdbms.version}</version>
+        </dependency>
+    </dependencies>
+</project>

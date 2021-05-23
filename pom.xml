@@ -20,10 +20,12 @@
     <properties>
         <javax.jdo.version>3.2.0-m13</javax.jdo.version>
         <javax.persistence.version>2.2.3</javax.persistence.version>
+        <jakarta.persistence.version>3.0.0-SNAPSHOT</jakarta.persistence.version>
 
         <core.version>6.0.0-m1-SNAPSHOT</core.version>
         <api.jdo.version>6.0.0-m1-SNAPSHOT</api.jdo.version>
         <api.jpa.version>6.0.0-m1-SNAPSHOT</api.jpa.version>
+        <api.jakarta.version>6.0.0-m1-SNAPSHOT</api.jakarta.version>
         <api.rest.version>6.0.0-m1-SNAPSHOT</api.rest.version>
 
         <cassandra.version>6.0.0-m1-SNAPSHOT</cassandra.version>
@@ -44,6 +46,7 @@
 
         <jdo.query.version>6.0.0-m1</jdo.query.version>
         <jpa.query.version>6.0.0-m1</jpa.query.version>
+        <jakarta.query.version>6.0.0-m1-SNAPSHOT</jakarta.query.version>
     </properties>
 
     <modules>
@@ -59,6 +62,8 @@
         <module>jdo-xml</module>
 
         <module>jpa-rdbms</module>
+
+        <module>jakarta-rdbms</module>
     </modules>
 
     <licenses>

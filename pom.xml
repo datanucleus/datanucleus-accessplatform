@@ -22,27 +22,27 @@
         <javax.persistence.version>2.2.4</javax.persistence.version>
         <jakarta.persistence.version>3.0.0</jakarta.persistence.version>
 
-        <core.version>6.0.0-m2</core.version>
-        <api.jdo.version>6.0.0-m2</api.jdo.version>
-        <api.jpa.version>6.0.0-m2</api.jpa.version>
-        <api.jakarta.version>6.0.0-m2</api.jakarta.version>
-        <api.rest.version>6.0.0-m2</api.rest.version>
+        <core.version>6.0.0-m3</core.version>
+        <api.jdo.version>6.0.0-m3</api.jdo.version>
+        <api.jpa.version>6.0.0-m3</api.jpa.version>
+        <api.jakarta.version>6.0.0-m3</api.jakarta.version>
+        <api.rest.version>6.0.0-m3</api.rest.version>
 
-        <cassandra.version>6.0.0-m2</cassandra.version>
-        <excel.version>6.0.0-m2</excel.version>
-        <hbase.version>6.0.0-m2</hbase.version>
-        <json.version>6.0.0-m2</json.version>
-        <ldap.version>6.0.0-m2</ldap.version>
-        <mongodb.version>6.0.0-m2</mongodb.version>
-        <neo4j.version>6.0.0-m2</neo4j.version>
-        <odf.version>6.0.0-m2</odf.version>
-        <rdbms.version>6.0.0-m2</rdbms.version>
-        <xml.version>6.0.0-m2</xml.version>
+        <cassandra.version>6.0.0-m3</cassandra.version>
+        <excel.version>6.0.0-m3</excel.version>
+        <hbase.version>6.0.0-m3</hbase.version>
+        <json.version>6.0.0-m3</json.version>
+        <ldap.version>6.0.0-m3</ldap.version>
+        <mongodb.version>6.0.0-m3</mongodb.version>
+        <neo4j.version>6.0.0-m3</neo4j.version>
+        <odf.version>6.0.0-m3</odf.version>
+        <rdbms.version>6.0.0-m3</rdbms.version>
+        <xml.version>6.0.0-m3</xml.version>
 
-        <jodatime.version>6.0.0-m2</jodatime.version>
-        <geospatial.version>6.0.0-m2</geospatial.version>
-        <cache.version>6.0.0-m2</cache.version>
-        <guava.version>6.0.0-m2</guava.version>
+        <jodatime.version>6.0.0-m3</jodatime.version>
+        <geospatial.version>6.0.0-m3</geospatial.version>
+        <cache.version>6.0.0-m3</cache.version>
+        <guava.version>6.0.0-m3</guava.version>
 
         <jdo.query.version>6.0.0-m1</jdo.query.version>
         <jpa.query.version>6.0.0-m1</jpa.query.version>

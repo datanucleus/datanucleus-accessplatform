@@ -10,7 +10,7 @@
 
     <groupId>org.datanucleus</groupId>
     <artifactId>datanucleus-accessplatform-parent</artifactId>
-    <version>6.0.0-m4-SNAPSHOT</version>
+    <version>6.0.0-m4</version>
 
     <packaging>pom</packaging>
     <name>DataNucleus AccessPlatform Libraries Parent</name>
@@ -22,27 +22,27 @@
         <javax.persistence.version>2.2.4</javax.persistence.version>
         <jakarta.persistence.version>3.0.0</jakarta.persistence.version>
 
-        <core.version>6.0.0-m3</core.version>
-        <api.jdo.version>6.0.0-m3</api.jdo.version>
-        <api.jpa.version>6.0.0-m3</api.jpa.version>
-        <api.jakarta.version>6.0.0-m3</api.jakarta.version>
-        <api.rest.version>6.0.0-m3</api.rest.version>
+        <core.version>6.0.0-m4</core.version>
+        <api.jdo.version>6.0.0-m4</api.jdo.version>
+        <api.jpa.version>6.0.0-m4</api.jpa.version>
+        <api.jakarta.version>6.0.0-m4</api.jakarta.version>
+        <api.rest.version>6.0.0-m4</api.rest.version>
 
-        <cassandra.version>6.0.0-m3</cassandra.version>
-        <excel.version>6.0.0-m3</excel.version>
-        <hbase.version>6.0.0-m3</hbase.version>
-        <json.version>6.0.0-m3</json.version>
-        <ldap.version>6.0.0-m3</ldap.version>
-        <mongodb.version>6.0.0-m3</mongodb.version>
-        <neo4j.version>6.0.0-m3</neo4j.version>
-        <odf.version>6.0.0-m3</odf.version>
-        <rdbms.version>6.0.0-m3</rdbms.version>
-        <xml.version>6.0.0-m3</xml.version>
+        <cassandra.version>6.0.0-m4</cassandra.version>
+        <excel.version>6.0.0-m4</excel.version>
+        <hbase.version>6.0.0-m4</hbase.version>
+        <json.version>6.0.0-m4</json.version>
+        <ldap.version>6.0.0-m4</ldap.version>
+        <mongodb.version>6.0.0-m4</mongodb.version>
+        <neo4j.version>6.0.0-m4</neo4j.version>
+        <odf.version>6.0.0-m4</odf.version>
+        <rdbms.version>6.0.0-m4</rdbms.version>
+        <xml.version>6.0.0-m4</xml.version>
 
-        <jodatime.version>6.0.0-m3</jodatime.version>
-        <geospatial.version>6.0.0-m3</geospatial.version>
-        <cache.version>6.0.0-m3</cache.version>
-        <guava.version>6.0.0-m3</guava.version>
+        <jodatime.version>6.0.0-m4</jodatime.version>
+        <geospatial.version>6.0.0-m4</geospatial.version>
+        <cache.version>6.0.0-m4</cache.version>
+        <guava.version>6.0.0-m4</guava.version>
 
         <jdo.query.version>6.0.0-m1</jdo.query.version>
         <jpa.query.version>6.0.0-m1</jpa.query.version>

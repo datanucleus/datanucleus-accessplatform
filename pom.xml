@@ -20,7 +20,7 @@
     <properties>
         <javax.jdo.version>3.2.0-release</javax.jdo.version>
         <javax.persistence.version>2.2.4</javax.persistence.version>
-        <jakarta.persistence.version>3.0.0</jakarta.persistence.version>
+        <jakarta.persistence.version>3.1.0</jakarta.persistence.version>
 
         <core.version>6.0.0-m4</core.version>
         <api.jdo.version>6.0.0-m4</api.jdo.version>

@@ -22,31 +22,31 @@
         <javax.persistence.version>2.2.4</javax.persistence.version>
         <jakarta.persistence.version>3.1.0</jakarta.persistence.version>
 
-        <core.version>6.0.0-m5</core.version>
-        <api.jdo.version>6.0.0-m5</api.jdo.version>
-        <api.jpa.version>6.0.0-m5</api.jpa.version>
-        <api.jakarta.version>6.0.0-m5</api.jakarta.version>
-        <api.rest.version>6.0.0-m5</api.rest.version>
+        <core.version>6.0.0-release</core.version>
+        <api.jdo.version>6.0.0-release</api.jdo.version>
+        <api.jpa.version>6.0.0-release</api.jpa.version>
+        <api.jakarta.version>6.0.0-release</api.jakarta.version>
+        <api.rest.version>6.0.0-release</api.rest.version>
 
-        <cassandra.version>6.0.0-m5</cassandra.version>
-        <excel.version>6.0.0-m5</excel.version>
-        <hbase.version>6.0.0-m5</hbase.version>
-        <json.version>6.0.0-m5</json.version>
-        <ldap.version>6.0.0-m5</ldap.version>
-        <mongodb.version>6.0.0-m5</mongodb.version>
-        <neo4j.version>6.0.0-m5</neo4j.version>
-        <odf.version>6.0.0-m5</odf.version>
-        <rdbms.version>6.0.0-m5</rdbms.version>
-        <xml.version>6.0.0-m5</xml.version>
+        <cassandra.version>6.0.0-release</cassandra.version>
+        <excel.version>6.0.0-release</excel.version>
+        <hbase.version>6.0.0-release</hbase.version>
+        <json.version>6.0.0-release</json.version>
+        <ldap.version>6.0.0-release</ldap.version>
+        <mongodb.version>6.0.0-release</mongodb.version>
+        <neo4j.version>6.0.0-release</neo4j.version>
+        <odf.version>6.0.0-release</odf.version>
+        <rdbms.version>6.0.0-release</rdbms.version>
+        <xml.version>6.0.0-release</xml.version>
 
-        <jodatime.version>6.0.0-m5</jodatime.version>
-        <geospatial.version>6.0.0-m5</geospatial.version>
-        <cache.version>6.0.0-m5</cache.version>
-        <guava.version>6.0.0-m5</guava.version>
+        <jodatime.version>6.0.0-release</jodatime.version>
+        <geospatial.version>6.0.0-release</geospatial.version>
+        <cache.version>6.0.0-release</cache.version>
+        <guava.version>6.0.0-release</guava.version>
 
-        <jdo.query.version>6.0.0-m1</jdo.query.version>
-        <jpa.query.version>6.0.0-m1</jpa.query.version>
-        <jakarta.query.version>6.0.0-m1</jakarta.query.version>
+        <jdo.query.version>6.0.0-release</jdo.query.version>
+        <jpa.query.version>6.0.0-release</jpa.query.version>
+        <jakarta.query.version>6.0.0-release</jakarta.query.version>
     </properties>
 
     <modules>

@@ -22,8 +22,8 @@
         <javax.persistence.version>2.2.4</javax.persistence.version>
         <jakarta.persistence.version>3.1.0</jakarta.persistence.version>
 
-        <core.version>6.0.6</core.version>
-        <api.jdo.version>6.0.1</api.jdo.version>
+        <core.version>6.0.7</core.version>
+        <api.jdo.version>6.0.2</api.jdo.version>
         <api.jpa.version>6.0.1</api.jpa.version>
         <api.jakarta.version>6.0.0-release</api.jakarta.version>
         <api.rest.version>6.0.0-release</api.rest.version>
@@ -36,7 +36,7 @@
         <mongodb.version>6.0.0-release</mongodb.version>
         <neo4j.version>6.0.0-release</neo4j.version>
         <odf.version>6.0.0-release</odf.version>
-        <rdbms.version>6.0.6</rdbms.version>
+        <rdbms.version>6.0.7</rdbms.version>
         <xml.version>6.0.0-release</xml.version>
 
         <jodatime.version>6.0.1</jodatime.version>

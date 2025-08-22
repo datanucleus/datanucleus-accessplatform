@@ -2,12 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>7</version>
-    </parent>
-
     <groupId>org.datanucleus</groupId>
     <artifactId>datanucleus-accessplatform-parent</artifactId>
     <version>6.0.11-SNAPSHOT</version>
@@ -29,7 +23,7 @@
         <api.rest.version>6.0.0-release</api.rest.version>
 
         <cassandra.version>6.0.0-release</cassandra.version>
-        <excel.version>6.0.1</excel.version>
+        <excel.version>6.0.2</excel.version>
         <hbase.version>6.0.1</hbase.version>
         <json.version>6.0.0-release</json.version>
         <ldap.version>6.0.0-release</ldap.version>
@@ -37,7 +31,7 @@
         <neo4j.version>6.0.0-release</neo4j.version>
         <odf.version>6.0.0-release</odf.version>
         <rdbms.version>6.0.10</rdbms.version>
-        <xml.version>6.0.0-release</xml.version>
+        <xml.version>6.0.1</xml.version>
 
         <jodatime.version>6.0.1</jodatime.version>
         <geospatial.version>6.0.1</geospatial.version>
@@ -108,6 +102,72 @@
     </build>
 
     <profiles>
+        <!-- Used by "deploy" plugin, to deploy to Maven Central. -->
+        <profile>
+            <id>release-deployment</id>
+            <activation>
+                <property>
+                    <name>performRelease</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>3.3.1</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>3.2.7</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.sonatype.central</groupId>
+                        <artifactId>central-publishing-maven-plugin</artifactId>
+                        <version>0.8.0</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <publishingServerId>central</publishingServerId>
+                            <autoPublish>true</autoPublish>
+                            <waitUntil>uploaded</waitUntil>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <!-- Used when "release" plugin is enabled, to sign artifacts. -->
         <profile>
             <id>release-sign-artifacts</id>
             <activation>
